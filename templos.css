@@ -1,0 +1,62 @@
+body {
+        background-color: #f8f9fa;
+        color: #495057;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+
+    .custom-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin: 80px;
+    }
+
+    h1, h3 {
+        color: #007bff;
+    }
+
+    .carousel-item img {
+        border-radius: 10px;
+        object-fit: cover;
+        height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    }
+
+    hr {
+        border-color: #007bff;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .map-container {
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+
+    .info-section {
+        margin-top: 20px;
+    }
+
+    .map-icon {
+        color: #007bff;
+        font-size: 24px;
+        margin-right: 5px;
+    }
+
+    .card {
+        border: none;
+        transition: transform 0.3s;
+        margin-bottom: 20px;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .divider {
+        border-top: 2px solid #007bff;
+        margin: 20px 0;
+    }
