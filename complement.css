@@ -1,4 +1,3 @@
-   
    /* --- PANTALLA DE CARGA --- */
 
     .loader-wrapper {
@@ -52,6 +51,22 @@
         line-height: 1.5;
     }
 
+    @media (max-width: 999px) {
+        .logopc {
+            width: 180px;
+        }
+
+        .loader {
+            width: 180px;
+            height: 180px;
+        }
+
+        .loader-wrapper p {
+            font-size: 15px;
+        }
+
+    }
+
     /* --- MENÚ --- */
 
     .navbar {
@@ -75,12 +90,36 @@
         color: #6c757d !important;
     }
 
+    #ndmenu1 {
+        display: inline-block;
+    }
+
+    #ndmenu2 {
+        display: none;
+    }
+
     @media (max-width: 767px) {
         .navbar-nav {
             margin-top: 10px;
         }
     }
 
+    @media (max-width: 775px) {
+        #logomenu {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        #ndmenu1 {
+            display: none;
+        }
+
+        #ndmenu2 {
+            display: inline-block;
+        }
+    }
+    
     .nav-item {
         transition: background-color 0.3s ease;
     }
@@ -103,19 +142,63 @@
     #sma {
         margin-bottom: 3px;
     }
-      
-    /* --- SLIDER --- */
 
-    #avisosSlider {
-        width: 100%; 
-        height: 100%;
-        
+    /* --- SUBMENU --- */
+
+    .dropdown-menu {
+        border: 2px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
+        min-width: 200px;
     }
 
-    #avisosSlider .carousel-inner a img {
-        border: 0 ; 
-        border-radius: 0;
-        box-shadow: none; 
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus {
+        background-color: #ececec; 
+    }
+
+    .dropdown-menu a {
+        color: #212529;
+    }
+    
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus {
+        color: #007bff; /* Cambiar el color del texto al pasar el cursor o al enfocar */
+    }
+
+    @media (max-width: 991px) {
+
+        .dropdown-menu {
+            text-align: center; /* Centrar texto del submenú */
+            }
+
+        #ndmenu1 {
+            display: inline-block;
+        }
+        
+        #ndmenu2 {
+            display: none;
+        }
+
+    }
+
+
+    /* --- SLIDER --- */
+
+    @media screen and (max-width: 999px) {
+
+        #carouselbanner {
+            width: 100%;
+            height: 11vh;
+        }
+
+        .carousel-control-prev {
+            left: 0px !important;
+        }
+        
+        .carousel-control-next {
+            right: 0px !important;
+        }
+
     }
 
     .carousel-content {
@@ -124,12 +207,10 @@
         padding: 20px;
     }
 
-    #avisoImage1,
-    #avisoImage2, 
-    #avisoImage3 {
-        border: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
+    .carousel-inner img {
+        border: none;
+        border-radius: 0;
+        box-shadow: none s;
     }
 
     .custom-carousel-control {
@@ -157,7 +238,7 @@
     .carousel-control-next {
         right: -80px;
     }
-       
+
     /* --- PIE DE PAGINA --- */
 
     footer {
@@ -194,17 +275,3 @@
         margin-top: 20px;
         color: #ffffff !important;
     }
-
-   
-    /*  .navbar-brand {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff; 
-        }
-
-        .navbar-nav .nav-link {
-            font-size: 18px;
-            color: #ffffff; 
-        
-    
-    */

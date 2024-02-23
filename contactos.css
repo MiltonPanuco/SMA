@@ -2,6 +2,7 @@
         background-color: #f8f9fa; 
         color: #495057; 
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-items: center;
     }
 
     .container-contact {
@@ -86,7 +87,6 @@
     }
 
     @media screen and (max-width: 999px) {
-        /* Estilos específicos para pantallas más pequeñas */
         .container-contact .row {
             flex-direction: column;
         }
@@ -94,7 +94,7 @@
             width: 100%;
         }
         .contact-image {
-            margin-top: 20px; /* Ajusta el margen superior de la imagen de contacto */
+            margin-top: 20px; 
         }
     }
 
@@ -118,8 +118,10 @@
         }
 
         .container-contact {
-            margin: 0px;
+            margin-right: 10px;
+            margin-left: 10px;
             margin-top: 50px;
+            margin-bottom: 50px;
         }
 
     }

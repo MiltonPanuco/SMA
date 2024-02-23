@@ -45,10 +45,15 @@
         margin-left: 10px;
     }
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 999px) {
         #icon {
-          display: none;
-          text-align: center;
+            display: none;
+            text-align: center;
+        }
+
+        .section {
+            margin-right: 10px;
+            margin-left: 10px;
         }
 
     }

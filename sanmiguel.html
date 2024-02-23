@@ -35,45 +35,70 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
 
-                    <a id="sma" class="navbar-brand" href="#">San Miguel Arcangel</a>
+                    <a id="sma" class="navbar-brand" href="sanmiguel.html">San Miguel Arcangel</a>
 
                     <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                    
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="templo.html">Templos</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="diocesis.html">Nuestra Diócesis</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="trabajando.html">Sacramentos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Organización Pastoral</a>
-                                <ul class="submenu">
-                                    <li><a href="trabajando.html">Organización Social</a></li>
-                                    <li><a href="trabajando.html">Organización Profética</a></li>
-                                    <li><a href="trabajando.html">Organización Tamales</a></li>
-                                </ul>
+
+                            <li class="nav-item dropdown">
                                 
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sacramentos
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="trabajando.html">Misa para enfermos</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Bautismo</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Confirmación</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Eucaristía</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Matrimonio</a></li>
+                                </ul>
                             </li>
+
+                            <li class="nav-item">
+                                <a id="ndmenu1" class="nav-link" href="diocesis.html">Nuestra Diócesis</a>
+                                <a id="ndmenu2" class="nav-link" href="diocesis.html">N.D.</a> 
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Organización Pastoral
+                                </a>
+                                
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="trabajando.html">Organización Litúrgica</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Organización Social</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Organización Profética</a></li>
+                                </ul>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="galeria.html">Galería</a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="contactos.html">Contacto</a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Catequesis</a>
+                                <a class="nav-link" href="trabajando.html">Catequesis</a>
                             </li>
+
                         </ul>
                     </div>
+
                 </div>
-                <img src="imagen/smalogobc.png" alt="Logo" class="navbar-logo d-none d-md-block">
+
+                <img id="logomenu" src="imagen/smalogobc.png" alt="Logo" class="navbar-logo d-none d-md-block">
+
             </nav>
 
         </div>
@@ -129,56 +154,40 @@
                                     <a href="pagina1.html">Ir a página 1</a>
                                 </div>
                             </div>
-
-                            <div class="image-button">
-                                <img src="imagen/relleno3.jpg" alt="Descripción de la imagen 2">
-                                <div class="button-container">
-                                    <a href="pagina2.html">Ir a página 2</a>
-                                </div>
-                            </div>
-
-                            <div class="image-button">
-                                <img src="imagen3.jpg" alt="Descripción de la imagen 3">
-                                <div class="button-container">
-                                    <a href="pagina3.html">Ir a página 3</a>
-                                </div>
-                            </div>
+                            
                         </div>
 
-                    </div>
-
-                    <div class="col-md-6">
+                        <div class="col-md-6">
 
                         <!-- CONTENIDO ADICIONAL -->
 
-                        <div class="additional-content">
-                            <h3>Contenido Adicional</h3>
-                            <p>¡Bienvenidos a nuestro sitio web de San Miguel Arcángel! Aquí encontrarás información sobre nuestros
-                                templos, diócesis, sacramentos y más. Explora y conoce nuestra fe.</p>
-                            <p>No olvides seguirnos en nuestras redes sociales para recibir las últimas noticias y eventos de la
-                                comunidad.</p>
+                            <div class="additional-content">
+                                <h3>Contenido Adicional</h3>
+                                <p>¡Bienvenidos a nuestro sitio web de San Miguel Arcángel! Aquí encontrarás información sobre nuestros
+                                    templos, diócesis, sacramentos y más. Explora y conoce nuestra fe.</p>
+                                <p>No olvides seguirnos en nuestras redes sociales para recibir las últimas noticias y eventos de la
+                                    comunidad.</p>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
 
+                    </div>
                 </div>
             </div>
-            
-        </body>
 
     <!-- PIE DE PÁGINA -->
 
-    <footer id="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">San Miguel Arcángel</div>
+                <div class="footer-logo">San Miguel Arcangel</div>
             </div>
             <div class="footer-info">
-                <p>"En tus alas encontramos refugio y seguridad, ¡Oh poderoso Arcángel!."</p>
+                <p>"San Miguel Arcángel, defiéndenos en la batalla"</p>
             </div>
         </div>
         <p class="text-muted">&copy; 2024 SMA. Todos los derechos reservados.
-            <br>Creado con ❤️ para el Reino de Cristo
+                                <br>Creado con ❤️ para el Reino de Cristo
         </p>
     </footer>
 

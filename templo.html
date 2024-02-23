@@ -10,6 +10,7 @@
         <link rel="icon" href="imagen/smalogo.jpg" type="image/x-icon">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
         <link rel="stylesheet" type="text/css" href="templos.css">
         <link rel="stylesheet" type="text/css" href="complement.css">
@@ -62,7 +63,7 @@
             </div>
                 
             <!-- MENU -->
-
+            
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
 
@@ -74,21 +75,41 @@
                     
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
-
+                            
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Templos</a>
+                                <a class="nav-link" href="templo.html">Templos</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Sacramentos
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="trabajando.html">Misa para enfermos</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Bautismo</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Confirmación</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Eucaristía</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Matrimonio</a></li>
+                                </ul>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="diocesis.html">Nuestra Diócesis</a>
+                                <a id="ndmenu1" class="nav-link" href="diocesis.html">Nuestra Diócesis</a>
+                                <a id="ndmenu2" class="nav-link" href="diocesis.html">N.D.</a> 
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="trabajando.html">Sacramentos</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="trabajando.html">Organización Pastoral</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Organización Pastoral
+                                </a>
+                                
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <li><a class="dropdown-item" href="trabajando.html">Organización Litúrgica</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Organización Social</a></li>
+                                    <li><a class="dropdown-item" href="trabajando.html">Organización Profética</a></li>
+                                </ul>
                             </li>
 
                             <li class="nav-item">
@@ -100,7 +121,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Catequesis</a>
+                                <a class="nav-link" href="trabajando.html">Catequesis</a>
                             </li>
 
                         </ul>
@@ -108,10 +129,10 @@
 
                 </div>
 
-                <img src="imagen/smalogobc.png" alt="Logo" class="navbar-logo d-none d-md-block">
+                <img id="logomenu" src="imagen/smalogobc.png" alt="Logo" class="navbar-logo d-none d-md-block">
 
             </nav>
-
+            
         </div>
 
             <!-- CUERPO DE LA PAGINA -->
@@ -151,30 +172,42 @@
                         <div class="card-body">
 
                             <h3 class="card-title">Parróquia San Miguel Arcangel</h3>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint recusandae porro sed, ad quidem excepturi qui, cumque deserunt nulla quo expedita voluptatibus ipsam. Tenetur, ratione! Dolor, veritatis sit! Blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci perspiciatis cum consequatur ad temporibus nobis, perferendis ratione modi, rerum sit quae laborum laudantium quas maxime, mollitia cupiditate ab error.</p>
-                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Colonia Falsa, Numero 24, Xalisco </a> </p>
+                            <p class="card-text">La Parroquia San Miguel Arcángel es un refugio espiritual donde la fe, la esperanza y el amor se entrelazan. Inspirados por San Miguel Arcángel, buscamos compartir el mensaje del evangelio y servir a nuestra comunidad con devoción y compasión.</p>
+                            <p class="card-text">   <strong>    Eucarístias:<br> </strong>
+                                                                Lunes a Sábado: 19:00<br>
+                                                                Jueves y Sábado: 07:00<br>
+                                                                Domingo: 07:00, 09:00, 19:00, 20:00
+                            </p>
+                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/DosuBbt8MDcTP4Rj9"> C. Níquel #46, Col. Morelos </a> </p>
                             
                             <hr>
 
                             <div id="mapatemplo1" class="map-container"></div>
                             
                             <script>
-                                const claveAPI = 'AQUIVALACLAVE';
-
                                 function initMaptemplo1() {
-                                    const templo1 = { lat: 21.451267586126622, lng: -104.9055825899271 }; // Coordenadas
-                                    const mapatemplo1 = new google.maps.Map(document.getElementById('mapatemplo1'), {
-                                        center: templo1,
-                                        zoom: 18
-                                    });
-                                    const marcadortemplo1 = new google.maps.Marker({
-                                        position: templo1,
-                                        map: mapatemplo1,
-                                        title: 'Templo 1'
-                                    });
-                                }
+                                const mapatemplo1 = L.map('mapatemplo1', {
+                                    scrollWheelZoom: false, 
+                                    doubleClickZoom: false, 
+                                    dragging: false,
+                                    zoomControl: false
+                                }).setView([21.451267586126622, -104.9055825899271], 18);
+
+                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                    maxZoom: 17,
+                                }).addTo(mapatemplo1);
+
+                                L.marker([21.451267586126622, -104.9055825899271]).addTo(mapatemplo1)
+                                    .bindPopup('Parróquia San Miguel Arcángel')
+                                    .openPopup();
+                            }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=${claveAPI}&callback=initMaptemplo1" async defer></script>
+
+                            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+                            <script>
+                                initMaptemplo1(); 
+                            </script>
 
                         </div>
                     </div>
@@ -212,30 +245,39 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h3 class="card-title">Templo 2</h3>
+                            <h3 class="card-title">Capilla Inmaculada Concepción de María</h3>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint recusandae porro sed, ad quidem excepturi qui, cumque deserunt nulla quo expedita voluptatibus ipsam. Tenetur, ratione! Dolor, veritatis sit! Blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci perspiciatis cum consequatur ad temporibus nobis, perferendis ratione modi, rerum sit quae laborum laudantium quas maxime, mollitia cupiditate ab error.</p>
-                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Colonia Falsa, Numero 25, Xalisco </a> </p>
+                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/DAEYoXxUsdbTHSDX6"> C. Jilguero, Col. Nuevo Progreso </a> </p>
                             
                             <hr>
 
                             <div id="mapatemplo2" class="map-container"></div>
-                           
+                            
                             <script>
                                 function initMaptemplo2() {
-                                    const templo2 = { lat: 21.451267586126622, lng: -104.9055825899271 }; // Reemplazar coodernadas
-                                    const mapatemplo2 = new google.maps.Map(document.getElementById('mapatemplo2'), {
-                                        center: templo2,
-                                        zoom: 18
-                                    });
-                                    const marcadortemplo2 = new google.maps.Marker({
-                                        position: templo2,
-                                        map: mapatemplo2,
-                                        title: 'Templo2'
-                                    });
+                                    const mapatemplo2 = L.map('mapatemplo2', {
+                                        scrollWheelZoom: false,
+                                        doubleClickZoom: false,
+                                        dragging: false,
+                                        zoomControl: false
+                                    }).setView([21.461363999333575, -104.89835249245886], 18); // Reemplaza latitud y longitud con los valores reales
+                    
+                                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        maxZoom: 17,
+                                    }).addTo(mapatemplo2);
+                    
+                                    L.marker([21.461363999333575, -104.89835249245886]).addTo(mapatemplo2)
+                                        .bindPopup('Capilla Inmaculada Concepción de María')
+                                        .openPopup();
                                 }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=${claveAPI}&callback=initMaptemplo2" async defer></script>
                         
+                            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                            
+                            <script>
+                                initMaptemplo2(); 
+                            </script>
+
                         </div>
                     </div>
                 </div>
@@ -273,9 +315,9 @@
 
                         <div class="card-body">
                             
-                            <h3 class="card-title">Templo 3</h3>
+                            <h3 class="card-title">Capilla Nuestra Señora de la Luz</h3>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint recusandae porro sed, ad quidem excepturi qui, cumque deserunt nulla quo expedita voluptatibus ipsam. Tenetur, ratione! Dolor, veritatis sit! Blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci perspiciatis cum consequatur ad temporibus nobis, perferendis ratione modi, rerum sit quae laborum laudantium quas maxime, mollitia cupiditate ab error.</p>
-                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Colonia Falsa, Numero 25, Xalisco </a> </p>
+                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/gkhgAZsfBwK4nR8E8"> C. Urano #10, Col. Lomas del Nayar </a> </p>
                             
                             <hr>
 
@@ -283,19 +325,28 @@
                             
                             <script>
                                 function initMaptemplo3() {
-                                    const templo3 = { lat: 21.451267586126622, lng: -104.9055825899271 }; // Reemplazar coodernadas
-                                    const mapatemplo3 = new google.maps.Map(document.getElementById('mapatemplo3'), {
-                                        center: templo3,
-                                        zoom: 18
-                                    });
-                                    const marcadortemplo3 = new google.maps.Marker({
-                                        position: templo3,
-                                        map: mapatemplo3,
-                                        title: 'Templo 3'
-                                    });
+                                    const mapatemplo3 = L.map('mapatemplo3', {
+                                        scrollWheelZoom: false,
+                                        doubleClickZoom: false,
+                                        dragging: false,
+                                        zoomControl: false
+                                    }).setView([21.463371294019506, -104.89198972410149], 18); // Reemplaza latitud y longitud con los valores reales
+                    
+                                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        maxZoom: 17,
+                                    }).addTo(mapatemplo3);
+                    
+                                    L.marker([21.463371294019506, -104.89198972410149]).addTo(mapatemplo3)
+                                        .bindPopup('Capilla Nuestra Señora de la Luz')
+                                        .openPopup();
                                 }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=${claveAPI}&callback=initMaptemplo3" async defer></script>
+                        
+                            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                            
+                            <script>
+                                initMaptemplo3(); 
+                            </script>
 
                         </div>
                     </div>
@@ -333,9 +384,9 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h3 class="card-title">Templo 4</h3>
+                            <h3 class="card-title">Capilla San Juan Diego</h3>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint recusandae porro sed, ad quidem excepturi qui, cumque deserunt nulla quo expedita voluptatibus ipsam. Tenetur, ratione! Dolor, veritatis sit! Blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci perspiciatis cum consequatur ad temporibus nobis, perferendis ratione modi, rerum sit quae laborum laudantium quas maxime, mollitia cupiditate ab error.</p>
-                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Colonia Falsa, Numero 25, Xalisco </a> </p>
+                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/G6uxuexXoJeNRCPa8"> C. Shanghay #100, Col. Insurgentes </a> </p>
                             
                             <hr>
                         
@@ -343,19 +394,28 @@
                             
                             <script>
                                 function initMaptemplo4() {
-                                    const templo4 = { lat: 21.451267586126622, lng: -104.9055825899271 }; // Reemplazar coodernadas 
-                                    const mapatemplo4 = new google.maps.Map(document.getElementById('mapatemplo4'), {
-                                        center: templo4,
-                                        zoom: 18
-                                    });
-                                    const marcadortemplo4 = new google.maps.Marker({
-                                        position: templo4,
-                                        map: mapatemplo4,
-                                        title: 'Templo 4'
-                                    });
+                                    const mapatemplo4 = L.map('mapatemplo4', {
+                                        scrollWheelZoom: false,
+                                        doubleClickZoom: false,
+                                        dragging: false,
+                                        zoomControl: false
+                                    }).setView([21.47238178214613, -104.89364150747643], 18); // Reemplaza latitud y longitud con los valores reales
+                    
+                                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        maxZoom: 17,
+                                    }).addTo(mapatemplo4);
+                    
+                                    L.marker([21.47238178214613, -104.89364150747643]).addTo(mapatemplo4)
+                                        .bindPopup('Capilla San Juan Diego')
+                                        .openPopup();
                                 }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=${claveAPI}&callback=initMaptemplo4" async defer></script>
+                        
+                            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                            
+                            <script>
+                                initMaptemplo4(); 
+                            </script>
 
                         </div>
                     </div>
@@ -394,9 +454,9 @@
 
                         <div class="card-body">
                             
-                            <h3 class="card-title">Templo 5</h3>
+                            <h3 class="card-title">Capilla Nuestra Señora de Guadalupe</h3>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint recusandae porro sed, ad quidem excepturi qui, cumque deserunt nulla quo expedita voluptatibus ipsam. Tenetur, ratione! Dolor, veritatis sit! Blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci perspiciatis cum consequatur ad temporibus nobis, perferendis ratione modi, rerum sit quae laborum laudantium quas maxime, mollitia cupiditate ab error.</p>
-                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Colonia Falsa, Numero 25, Xalisco </a> </p>
+                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/QVheoBzkvqvEd3Py8"> C. Álamo y C. Granados, Col.Huertas de Matatipac </a> </p>
                             
                             <hr>
 
@@ -404,19 +464,28 @@
                             
                             <script>
                                 function initMaptemplo5() {
-                                    const templo5 = { lat: 21.451267586126622, lng: -104.9055825899271 }; // Reemplazar coodernadas
-                                    const mapatemplo5 = new google.maps.Map(document.getElementById('mapatemplo5'), {
-                                        center: templo5,
-                                        zoom: 18
-                                    });
-                                    const marcadortemplo5 = new google.maps.Marker({
-                                        position: templo5,
-                                        map: mapatemplo5,
-                                        title: 'Templo 5'
-                                    });
+                                    const mapatemplo5 = L.map('mapatemplo5', {
+                                        scrollWheelZoom: false,
+                                        doubleClickZoom: false,
+                                        dragging: false,
+                                        zoomControl: false
+                                    }).setView([21.455806198743847, -104.89713821845478], 18); // Reemplaza latitud y longitud con los valores reales
+                    
+                                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        maxZoom: 17,
+                                    }).addTo(mapatemplo5);
+                    
+                                    L.marker([21.455806198743847, -104.89713821845478]).addTo(mapatemplo5)
+                                        .bindPopup('Capilla Nuestra Señora de Guadalupe')
+                                        .openPopup();
                                 }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=${claveAPI}&callback=initMaptemplo5" async defer></script>
+                        
+                            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                            
+                            <script>
+                                initMaptemplo5(); 
+                            </script>
 
                         </div>
                     </div>
@@ -425,8 +494,8 @@
 
             <div class="divider"></div> 
 
-             <!-- TEMPLO 6 -->
-             <div class="row mb-4">
+            <!-- TEMPLO 6 -->
+            <div class="row mb-4">
                 <div class="col-md-6 order-md-2">
                     
                     <!-- Imagenes del carrusel -->
@@ -454,30 +523,39 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h3 class="card-title">Templo 6</h3>
+                            <h3 class="card-title">Capilla Nuestra Señora de Gpe. Reina de México</h3>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint recusandae porro sed, ad quidem excepturi qui, cumque deserunt nulla quo expedita voluptatibus ipsam. Tenetur, ratione! Dolor, veritatis sit! Blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci perspiciatis cum consequatur ad temporibus nobis, perferendis ratione modi, rerum sit quae laborum laudantium quas maxime, mollitia cupiditate ab error.</p>
-                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Colonia Falsa, Numero 25, Xalisco </a> </p>
+                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/AaXDdzo6crnGH8vd6"> C, Sánchez Vázquez #14, Col. Sánchez Vázquez </a> </p>
                             
                             <hr>
 
                             <div id="mapatemplo6" class="map-container"></div>
-                           
+
                             <script>
                                 function initMaptemplo6() {
-                                    const templo6 = { lat: 21.451267586126622, lng: -104.9055825899271 }; // Reemplazar coodernadas
-                                    const mapatemplo6 = new google.maps.Map(document.getElementById('mapatemplo6'), {
-                                        center: templo6,
-                                        zoom: 18
-                                    });
-                                    const marcadortemplo6 = new google.maps.Marker({
-                                        position: templo6,
-                                        map: mapatemplo6,
-                                        title: 'Templo6'
-                                    });
+                                    const mapatemplo6 = L.map('mapatemplo6', {
+                                        scrollWheelZoom: false,
+                                        doubleClickZoom: false,
+                                        dragging: false,
+                                        zoomControl: false
+                                    }).setView([21.464947734694423, -104.90780586539476], 18); // Reemplaza latitud y longitud con los valores reales
+                    
+                                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        maxZoom: 17,
+                                    }).addTo(mapatemplo6);
+                    
+                                    L.marker([21.464947734694423, -104.90780586539476]).addTo(mapatemplo6)
+                                        .bindPopup('Capilla Nuestra Señora de Gpe. Reina de México')
+                                        .openPopup();
                                 }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=${claveAPI}&callback=initMaptemplo6" async defer></script>
                         
+                            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                            
+                            <script>
+                                initMaptemplo6(); 
+                            </script>
+
                         </div>
                     </div>
                 </div>
@@ -515,9 +593,9 @@
 
                         <div class="card-body">
                             
-                            <h3 class="card-title">Templo 7</h3>
+                            <h3 class="card-title">Misa de barrio Sagrada Familia de Nazareth</h3>
                             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis sint recusandae porro sed, ad quidem excepturi qui, cumque deserunt nulla quo expedita voluptatibus ipsam. Tenetur, ratione! Dolor, veritatis sit! Blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam adipisci perspiciatis cum consequatur ad temporibus nobis, perferendis ratione modi, rerum sit quae laborum laudantium quas maxime, mollitia cupiditate ab error.</p>
-                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Colonia Falsa, Numero 25, Xalisco </a> </p>
+                            <p class="card-text"><strong>Dirección:</strong> <a href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Av. Vista Real, Col. Minas de Xali </a> </p>
                             
                             <hr>
 
@@ -525,19 +603,28 @@
                             
                             <script>
                                 function initMaptemplo7() {
-                                    const templo7 = { lat: 21.451267586126622, lng: -104.9055825899271 }; // Reemplazar coodernadas
-                                    const mapatemplo7 = new google.maps.Map(document.getElementById('mapatemplo7'), {
-                                        center: templo7,
-                                        zoom: 18
-                                    });
-                                    const marcadortemplo7 = new google.maps.Marker({
-                                        position: templo7,
-                                        map: mapatemplo7,
-                                        title: 'Templo 7'
-                                    });
+                                    const mapatemplo7 = L.map('mapatemplo7', {
+                                        scrollWheelZoom: false,
+                                        doubleClickZoom: false,
+                                        dragging: false,
+                                        zoomControl: false
+                                    }).setView([21.464947734694423, -104.90780586539476], 18); // Reemplaza latitud y longitud con los valores reales
+                    
+                                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        maxZoom: 17,
+                                    }).addTo(mapatemplo7);
+                    
+                                    L.marker([21.464947734694423, -104.90780586539476]).addTo(mapatemplo7)
+                                        .bindPopup('Capilla Nuestra Señora de Gpe. Reina de México')
+                                        .openPopup();
                                 }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=${claveAPI}&callback=initMaptemplo7" async defer></script>
+                        
+                            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                            
+                            <script>
+                                initMaptemplo7(); 
+                            </script>
 
                         </div>
                     </div>
@@ -554,7 +641,7 @@
                     <div class="footer-logo">San Miguel Arcangel</div>
                 </div>
                 <div class="footer-info">
-                    <p>"Frase bonita de San Miguel Arcángel"</p>
+                    <p>"San Miguel, escudo de nuestra fe, protégenos"</p>
                 </div>
             </div>
             <p class="text-muted">&copy; 2024 SMA. Todos los derechos reservados.
@@ -565,6 +652,7 @@
         <!-- SCRIPTS -->
 
         <script src="general.js"></script>
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
