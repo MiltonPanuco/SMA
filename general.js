@@ -4,7 +4,7 @@
     document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         document.querySelector(".loader-wrapper").style.display = "none";
-    }, 100); // Milisegunditos
+    }, 500); // Milisegunditos
 
     // -------------- RECARGAR PAGINA ----------- //
 
@@ -21,3 +21,23 @@
     }
 
   })
+
+    // -------------- SCROLL PAGINA ----------- //
+
+    // Función para mostrar o esconder el icono de scroll según la posición del usuario en la página
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            document.getElementById("scrollToTop").style.display = "block";
+        } else {
+            document.getElementById("scrollToTop").style.display = "none";
+        }
+    }
+
+    // Función para hacer scroll hasta arriba de la página
+    function scrollToTop() {
+        document.body.scrollTop = 0; // Para Safari
+        document.documentElement.scrollTop = 0; // Para otros navegadores
+    }
+      

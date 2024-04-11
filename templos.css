@@ -42,6 +42,7 @@
         border-radius: 10px;
         overflow: hidden;
         margin-top: 15px;
+        position: relative;
     }
 
     .info-section {
@@ -56,12 +57,7 @@
 
     .card {
         border: none;
-        transition: transform 0.3s;
         margin-bottom: 20px;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
     }
 
     .divider {
@@ -69,3 +65,17 @@
         margin: 20px 0;
     }
 
+    .modal-body ul {
+        text-align: left; 
+    }
+
+    .extra-margin {
+        margin-top: 20px;
+    }
+
+    #button1, #button2, #button3, #button4, #button5, #button6, #button7 {
+        position: absolute;
+        top: 10px;
+        right: 10px; 
+        z-index: 1000; 
+    }
