@@ -1,4 +1,4 @@
-   /* --- PANTALLA DE CARGA --- */
+    /* --- PANTALLA DE CARGA --- */
 
     .loader-wrapper {
         position: fixed;
@@ -119,7 +119,7 @@
             display: inline-block;
         }
     }
-    
+
     .nav-item {
         transition: background-color 0.3s ease;
     }
@@ -159,7 +159,7 @@
     .dropdown-menu a {
         color: #212529;
     }
-    
+
     .dropdown-menu a:hover,
     .dropdown-menu a:focus {
         color: #007bff; /* Cambiar el color del texto al pasar el cursor o al enfocar */
@@ -221,7 +221,7 @@
         font-size: 2rem;
         color: #fff;
     }
-    
+
     .custom-carousel-control.hidden {
         pointer-events: none;
     }
@@ -230,13 +230,13 @@
         text-decoration: none;
         opacity: 0.7;
     }
-    
+
     .carousel-control-prev {
-        left: -80px;
+        left: -65px;
     }
-    
+
     .carousel-control-next {
-        right: -80px;
+        right: -65px;
     }
 
     /* --- PIE DE PAGINA --- */
@@ -282,13 +282,35 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
-        display: none;
+        visibility: hidden;
         z-index: 99;
         color: #89acd2; 
         font-size: 2rem; 
         cursor: pointer; 
+        opacity: 0; 
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
     }
 
     #scrollToTop.show {
-        display: block;
+        visibility: visible; 
+        opacity: 1; 
+        animation: fadeIn 0.5s forwards; 
     }
+
+    #scrollToTop.hide {
+        opacity: 0; 
+        animation: fadeOut 0.5s forwards; 
+        animation-delay: 0s, 0.5s;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+
+

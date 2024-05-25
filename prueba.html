@@ -1,231 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>San Miguel Arcángel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel de Avisos Parroquiales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lucida+Bright&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
     
-    <link rel="icon" href="imagen/smalogo.jpg" type="image/x-icon">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
 
-    <link rel="stylesheet" type="text/css" href="sanmiguel.css">
-    <link rel="stylesheet" type="text/css" href="complement.css">
+    .slider {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
 
-    <style>
-        .megacontainer {
-            margin: 0 20px 0 20px;
-        }
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: relative;
+    }
 
-        .row .card {
-            border: none;
-            transition: transform 0.3s;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-    
-        .row .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-    
-        .row .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #dee2e6;
-        }
-    
-        .row .card-body {
-            padding: 1.5rem;
-        }
-    
-        .row .card-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-    
-        .row .card-text {
-            font-size: 1rem;
-            color: #6c757d;
-            text-align: center;
-        }
-    
-        .row .btn-primary {
-            background-color: #6c757d;
-            border-color: #6c757d;
-            transition: background-color 0.3s;
-            display: flex; 
-            justify-content: center; 
-            margin: 0 5vw 0 5vw;
-        }
-    
-        .row .btn-primary:hover {
-            background-color: #495057;
-            border-color: #495057;
-        }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .row {
-            margin-top: -5rem !important;
-            margin-bottom: 3rem !important;
-        }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3); /* Color negro ligeramente transparente */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
 
-    </style>
+    .overlay-text {
+      color: white;
+      font-size: 48px; /* Duplicando el tamaño del texto */
+      font-weight: bold;
+      font-family: 'Lucida Bright', serif; /* Utilizando la fuente Lucida Bright */
+      margin-bottom: 20px;
+    }
+
+    .subtext {
+      color: white;
+      font-size: 18px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .animated-text-1 {
+      animation: fadeInLeft 2s ease forwards;
+    }
+
+    .animated-text-2 {
+      animation: fadeInRight 2s ease forwards;
+    }
+
+    .animated-text-3 {
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .overlay-text {
+        font-size: 36px;
+      }
+
+      .subtext {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
+<body>
 
-<body>  
-    <div class="header"> 
-        <!-- PANTALLA DE CARGA -->
-        <div class="loader-wrapper">
-            <div class="logopc-wrapper">
-                <img class="logopc" src="imagen/smalogo.jpg" alt="Logo SMA">
-                <div class="loader"></div>
-            </div>  
-            <p>Cargando bendiciones...</p>
-        </div>
-
-        <!-- MENU -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a id="sma" class="navbar-brand" href="sanmiguel.html">San Miguel Arcangel</a>
-                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="templo.html">Templos</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sacramentos</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="trabajando.html">Misa para enfermos</a></li>
-                                <li><a class="dropdown-item" href="trabajando.html">Bautismo</a></li>
-                                <li><a class="dropdown-item" href="trabajando.html">Confirmación</a></li>
-                                <li><a class="dropdown-item" href="trabajando.html">Eucaristía</a></li>
-                                <li><a class="dropdown-item" href="trabajando.html">Matrimonio</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a id="ndmenu1" class="nav-link" href="diocesis.html">Nuestra Diócesis</a>
-                            <a id="ndmenu2" class="nav-link" href="diocesis.html">N.D.</a> 
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Organización Pastoral</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                <li><a class="dropdown-item" href="trabajando.html">Organización Litúrgica</a></li>
-                                <li><a class="dropdown-item" href="trabajando.html">Organización Social</a></li>
-                                <li><a class="dropdown-item" href="trabajando.html">Organización Profética</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="galeria.html">Galería</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactos.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="trabajando.html">Catequesis</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <img id="logomenu" src="imagen/smalogobc.png" alt="Logo" class="navbar-logo d-none d-md-block">
-        </nav>
+<div class="container">
+  <div class="slider">
+    <div class="slide">
+      <img src="imagen/fondoa.jpg" alt="Aviso 1">
+      <div class="overlay">
+        <div class="overlay-text animated-text-1">Aviso Parroquial</div>
+        <div class="subtext">¡Te esperamos en la celebración de la misa dominical!</div>
+      </div>
     </div>
-
-    <!-- CUERPO DE PÁGINA -->
-    <!-- CARRUSEL -->
-    <div id="background-slider" class="carousel slide carousel-slide" data-bs-ride="carousel" data-bs-pause="false">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="imagen/fondoa.jpg" class="d-block w-100" alt="Imagen Carrusel 1">
-                <div class="carousel-caption">
-                    <h3>"Amor que trasciende"</h3>
-                    <a href="#" class="btn btn-primary btn-custom" style="margin-top: 15px;">Bendición aquí</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagen/fondob.jpg" class="d-block w-100" alt="Imagen Carrusel 2">
-                <div class="carousel-caption">
-                    <h3>"Caminamos por fe, no por vista"</h3>
-                    <a href="#" class="btn btn-primary btn-custom" style="margin-top: 15px;">Conoce Más</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagen/fondoc.jpg" class="d-block w-100" alt="Imagen Carrusel 3">
-                <div class="carousel-caption">
-                    <h3>"En cada amanecer, la misericordia de Dios"</h3>
-                    <a href="#" class="btn btn-primary btn-custom" style="margin-top: 15px;">Gracia Eterna</a>
-                </div>
-            </div>
-        </div>
+    <div class="slide">
+      <img src="imagen/fondob.jpg" alt="Aviso 2">
+      <div class="overlay">
+        <div class="overlay-text animated-text-2">Evento Especial</div>
+        <div class="subtext">Ven y participa en la cena solidaria para apoyar a los más necesitados.</div>
+      </div>
     </div>
-
-    <!-- CONTENEDORES -->
-    <div class="megacontainer">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!-- Grupo Juvenil -->
-                <div class="col">
-                    <div class="card">
-                        <img src="imagen/indexjovenes.jpg" class="card-img-top" data-aos="fade-up" alt="Imagen Grupo Juvenil">
-                        <div class="card-body" data-aos="fade-up">
-                            <h5 class="card-title">Grupo Juvenil</h5>
-                            <p class="card-text">Actividades para jóvenes y adolescentes. <br>¡Únete y vive experiencias inolvidables!</p>
-                            <a href="trabajando.html" class="btn btn-primary">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Sacramentos -->
-                <div class="col">
-                    <div class="card">
-                        <img src="imagen/indexsacramentos.jpg" class="card-img-top" data-aos="fade-up" alt="Imagen Sacramentos">
-                        <div class="card-body" data-aos="fade-up">
-                            <h5 class="card-title">Sacramentos</h5>
-                            <p class="card-text">Explora los sacramentos de nuestra fe y cómo participar en su celebración.</p>
-                            <a href="trabajando.html" class="btn btn-primary">Explorar</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Más -->
-                <div class="col">
-                    <div class="card">
-                        <img src="imagen/indexotros.jpg" class="card-img-top" data-aos="fade-up" alt="Imagen Más">
-                        <div class="card-body" data-aos="fade-up">
-                            <h5 class="card-title">Más</h5>
-                            <p class="card-text">Descubre otros eventos, servicios y recursos disponibles en nuestra comunidad.</p>
-                            <a href="contactos.html" class="btn btn-primary">Descubrir</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="slide">
+      <img src="imagen/fondoc.jpg" alt="Aviso 3">
+      <div class="overlay">
+        <div class="overlay-text animated-text-3">Anuncio Importante</div>
+        <div class="subtext">Recuerda donar alimentos no perecederos para nuestra campaña de ayuda humanitaria.</div>
+      </div>
     </div>
+  </div>
+</div>
 
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">San Miguel Arcangel</div>
-            </div>
-            <div class="footer-info">
-                <p>"San Miguel Arcángel, defiéndenos en la batalla"</p>
-            </div>
-        </div>
-        <p class="text-muted">&copy; 2024 SMA. Todos los derechos reservados.<br>Creado con ❤️ para el Reino de Cristo</p>
-    </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+    var slides = $('.slide');
+    var currentIndex = 0;
 
-    <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="general.js"></script>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    
+    // Mostrar el primer slide
+    $(slides[currentIndex]).fadeIn();
+
+    // Cambiar al siguiente slide cada 7 segundos
+    setInterval(function(){
+      $(slides[currentIndex]).fadeOut(function(){
+        currentIndex = (currentIndex + 1) % slides.length;
+        $(slides[currentIndex]).fadeIn();
+      });
+    }, 7000);
+  });
+</script>
 </body>
 </html>

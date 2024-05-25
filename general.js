@@ -25,19 +25,52 @@
     // -------------- SCROLL PAGINA ----------- //
 
     // Función para mostrar o esconder el icono de scroll según la posición del usuario en la página
-    window.onscroll = function() {scrollFunction()};
-
+    window.onscroll = function() {
+        scrollFunction();
+    };
+    
     function scrollFunction() {
+        const scrollToTopButton = document.getElementById("scrollToTop");
         if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-            document.getElementById("scrollToTop").style.display = "block";
+            scrollToTopButton.classList.add('show');
+            scrollToTopButton.classList.remove('hide');
         } else {
-            document.getElementById("scrollToTop").style.display = "none";
+            scrollToTopButton.classList.add('hide');
+            scrollToTopButton.classList.remove('show');
         }
     }
-
-    // Función para hacer scroll hasta arriba de la página
+    
     function scrollToTop() {
-        document.body.scrollTop = 0; // Para Safari
-        document.documentElement.scrollTop = 0; // Para otros navegadores
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+    
+    // ---------------  SUB-SUBMENU -------------- //
       
+    var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+
+    dropdownSubmenus.forEach(function(dropdownSubmenu) {
+        var dropdownToggle = dropdownSubmenu.querySelector('.dropdown-toggle');
+
+        dropdownToggle.addEventListener('click', function(event) {
+            event.stopPropagation();
+            
+            dropdownSubmenus.forEach(function(submenu) {
+                var menu = submenu.querySelector('.dropdown-menu');
+                if (menu !== event.target.nextElementSibling) {
+                    menu.classList.remove('show');
+                }
+            });
+
+            dropdownSubmenu.querySelector('.dropdown-menu').classList.toggle('show');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        dropdownSubmenus.forEach(function(dropdownSubmenu) {
+            if (!dropdownSubmenu.contains(event.target)) {
+                dropdownSubmenu.querySelector('.dropdown-menu').classList.remove('show');
+            }
+        });
+    });
+
+    
