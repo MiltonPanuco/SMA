@@ -191,11 +191,11 @@
             height: 11vh;
         }
 
-        .carousel-control-prev {
+        .botonicon .carousel-control-prev {
             left: 0px !important;
         }
         
-        .carousel-control-next {
+        .botonicon .carousel-control-next {
             right: 0px !important;
         }
 
@@ -313,4 +313,13 @@
         to { opacity: 0; }
     }
 
+    /* TRANSICIÓN E/S DESVANECIMIENTO */
 
+    .hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+  
+      .show {
+        opacity: 1;
+      }

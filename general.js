@@ -73,4 +73,21 @@
         });
     });
 
+    // ---------------- HIDDEN - SHOW ---------------- //
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            } else {
+              entry.target.classList.remove("show");
+            }
+          });
+        }, { rootMargin: "-50px 0px" }); // Cambia el umbral de visibilidad aquí
+  
+        document.querySelectorAll(".hidden").forEach(hiddenElement => {
+          observer.observe(hiddenElement);
+        });
+      });
     
