@@ -6,6 +6,7 @@
         document.querySelector(".loader-wrapper").style.display = "none";
     }, 500); // Milisegunditos
 
+    
     // -------------- RECARGAR PAGINA ----------- //
 
     scrollToTopOnReload();
@@ -24,7 +25,6 @@
 
     // -------------- SCROLL PAGINA ----------- //
 
-    // Función para mostrar o esconder el icono de scroll según la posición del usuario en la página
     window.onscroll = function() {
         scrollFunction();
     };
@@ -44,36 +44,7 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     
-    // ---------------  SUB-SUBMENU -------------- //
-      
-    var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
-
-    dropdownSubmenus.forEach(function(dropdownSubmenu) {
-        var dropdownToggle = dropdownSubmenu.querySelector('.dropdown-toggle');
-
-        dropdownToggle.addEventListener('click', function(event) {
-            event.stopPropagation();
-            
-            dropdownSubmenus.forEach(function(submenu) {
-                var menu = submenu.querySelector('.dropdown-menu');
-                if (menu !== event.target.nextElementSibling) {
-                    menu.classList.remove('show');
-                }
-            });
-
-            dropdownSubmenu.querySelector('.dropdown-menu').classList.toggle('show');
-        });
-    });
-
-    document.addEventListener('click', function(event) {
-        dropdownSubmenus.forEach(function(dropdownSubmenu) {
-            if (!dropdownSubmenu.contains(event.target)) {
-                dropdownSubmenu.querySelector('.dropdown-menu').classList.remove('show');
-            }
-        });
-    });
-
-    // ---------------- HIDDEN - SHOW ---------------- //
+    // ---------------- HIDDEN - SHOW IMAGENES ---------------- //
 
     document.addEventListener("DOMContentLoaded", function() {
         const observer = new IntersectionObserver(entries => {
@@ -89,5 +60,7 @@
         document.querySelectorAll(".hidden").forEach(hiddenElement => {
           observer.observe(hiddenElement);
         });
-      });
-    
+      }); 
+
+
+      

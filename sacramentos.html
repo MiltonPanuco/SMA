@@ -34,122 +34,15 @@
     
             <div class="loader-wrapper">
                 <div class="logopc-wrapper">
-                <img class="logopc" src="imagen/smalogo.jpg" alt="Logo SMA">
-                <div class="loader"></div>
-                </div>  
+                    <img class="logopc" src="imagen/smalogo.jpg" alt="Logo SMA">
+                    <div class="loader"></div>
+                </div>
                 <p>Cargando bendiciones...</p>
             </div>
-
-            <!-- BANNER DE ANUNCIOS -->
-
-            <div id="avisosSlider" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    
-                    <div class="carousel-item active">
-                        <img id="avisoImage1" img src="imagen/aviso1.jpg" class="d-block w-100" alt="Aviso 1">
-                    </div>
             
-                    <div class="carousel-item">
-                        <img id="avisoImage2" img src="imagen/aviso2.jpg" class="d-block w-100" alt="Aviso 2">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img id="avisoImage3" img src="imagen/aviso3.jpg" class="d-block w-100" alt="Aviso 3">
-                    </div>
+            <div id="avisos-slider-placeholder"></div>
+            <div id="menu-placeholder"></div>  
             
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#avisosSlider" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    
-                    <button class="carousel-control-next" type="button" data-bs-target="#avisosSlider" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-
-                </div>
-            </div>
-                
-            <!-- MENU -->
-            
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-
-                    <a id="sma" class="navbar-brand" href="index.html">San Miguel Arcángel</a>
-
-                    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="templo.html">Templos</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a id="ndmenu1" class="nav-link" href="diocesis.html">Nuestra Diócesis</a>
-                                <a id="ndmenu2" class="nav-link" href="diocesis.html">N.D.</a> 
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Organización Pastoral</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Litúrgica</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="sacramentos.html">Sacramentos</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Monaguillos</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Equipo de Litúrgia</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Ministros Extraordinarios</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Social</a>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="trabajando.html">Pastoral de la Salud</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Psicología</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Profética</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="trabajando.html">Grupos Parroquiales</a></li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="columbario.html">Columbario</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="trabajando.html">Galería</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="contactos.html">Contacto</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="trabajando.html">Catequesis</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    
-                </div>
-                <img id="logomenu" src="imagen/smalogobc.png" alt="Logo" class="navbar-logo d-none d-md-block">
-            </nav>
-
         </div>
 
         <!-- CONTENIDO PAGINA -->
@@ -524,7 +417,7 @@
 
         </div>
 
-        <i id="scrollToTop" class="bi bi-arrow-up-circle" onclick="scrollToTop()"></i>
+        <i id="scrollToTop" class="bi bi-chevron-up" onclick="scrollToTop()"></i>
 
         <!-- PIE DE PÁGINA -->
 
@@ -546,6 +439,9 @@
         <!-- SCRIPTS -->
 
         <script src="general.js"></script>
+        <script src="menu.js"></script>
+        <script src="avisos-slider.js"></script>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>

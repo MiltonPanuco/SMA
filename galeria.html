@@ -1,572 +1,237 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Galería</title>
+    <title>Galería</title>
 
-        <link rel="icon" href="imagen/smalogo.jpg" type="image/x-icon">
+    <link rel="icon" href="imagen/smalogo.jpg" type="image/x-icon">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-        
-        <link rel="stylesheet" type="text/css" href="galeria.css">
-        <link rel="stylesheet" type="text/css" href="complement.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
-    </head>
+    <link rel="stylesheet" type="text/css" href="galeria.css">
+    <link rel="stylesheet" type="text/css" href="complement.css">
 
-    <body>
+</head>
 
-        <div class="header"> 
+<body>
 
-            <!-- PANTALLA DE CARGA -->
-    
-            <div class="loader-wrapper">
-                <div class="logopc-wrapper">
+    <div class="header">
+
+        <!-- PANTALLA DE CARGA -->
+
+        <div class="loader-wrapper">
+            <div class="logopc-wrapper">
                 <img class="logopc" src="imagen/smalogo.jpg" alt="Logo SMA">
                 <div class="loader"></div>
-                </div>  
-                <p>Cargando bendiciones...</p>
+            </div>
+            <p>Cargando bendiciones...</p>
+        </div>
+
+        <div id="avisos-slider-placeholder"></div>
+        <div id="menu-placeholder"></div>
+
+    </div>
+
+    <!-- CUERPO PAGINA -->
+
+    <!-- Album (Vista) -->
+    <div id="generalcontainer" class="container mt-5 custom-container">
+        <div class="row section align-items-center">
+
+            <div class="text-center mb-3">
+                <h2 style="color: #007bff;">Álbumes Fotográficos</h2>
+                <p style="font-size: 18px;">Una mirada al pasado...</p>
             </div>
 
-            <!-- BANNER DE ANUNCIOS -->
+            <!-- Primer Álbum -->
+            <div class="col-md-4 mb-5">
+                <div id="album1" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+                    <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
 
-            <div id="avisosSlider" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    
-                    <div class="carousel-item active">
-                        <img id="avisoImage1" img src="imagen/aviso1.jpg" class="d-block w-100" alt="Aviso 1">
-                    </div>
-            
-                    <div class="carousel-item">
-                        <img id="avisoImage2" img src="imagen/aviso2.jpg" class="d-block w-100" alt="Aviso 2">
+                        <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
+                            <img src="imagen/galeria/corpusc1.jpg" class="d-block w-100" alt="Imagen 1">
+                        </div>
+
+                        <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
+                            <img src="imagen/galeria/corpusc2.jpg" class="d-block w-100" alt="Imagen 2">
+                        </div>
+
+                        <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
+                            <img src="imagen/galeria/corpusc3.jpg" class="d-block w-100" alt="Imagen 3">
+                        </div>
+
+                        <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
+                            <img src="imagen/galeria/corpusc4.jpg" class="d-block w-100" alt="Imagen 4">
+                        </div>
+
+                        <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
+                            <img src="imagen/galeria/corpusc5.jpg" class="d-block w-100" alt="Imagen 5">
+                        </div>
+
+                        <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
+                            <img src="imagen/galeria/corpusc6.jpg" class="d-block w-100" alt="Imagen 6">
+                        </div>
+
                     </div>
 
-                    <div class="carousel-item">
-                        <img id="avisoImage3" img src="imagen/aviso3.jpg" class="d-block w-100" alt="Aviso 3">
+                    <div>
+                        <p class="text-center mt-3"> <strong>Corpus Christi 2024</strong> </p>
+                        <p class="text-center fecha"> 30 / 05 / 2024 </p>
                     </div>
-            
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#avisosSlider" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    
-                    <button class="carousel-control-next" type="button" data-bs-target="#avisosSlider" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
 
                 </div>
             </div>
+
+            <!-- Segundo Álbum -->
+            <div class="col-md-4 mb-5">
+                <div id="album2" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+                    <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum2">
+
+                        <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum2">
+                            <img src="imagen/rellenologo.jpg" class="d-block w-100" alt="Imagen 1">
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="text-center mt-3"> <strong>Álbum 2</strong> </p>
+                        <p class="text-center fecha"> DD / MM / YYYY </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tercer Álbum -->
+            <div class="col-md-4 mb-5">
+                <div id="album3" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+
+                    <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum3">
+
+                        <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum3">
+                            <img src="imagen/rellenologo.jpg" class="d-block w-100" alt="Imagen 1">
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="text-center mt-3"> <strong>Álbum 3</strong> </p>
+                        <p class="text-center fecha"> DD / MM / YYYY </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container mt-5 custom-container">
+        <div class="row section align-items-center">
+
+            <div class="text-center mb-3">
+
+                <p style="font-size: 1.5rem; font-family: 'Roboto Slab', serif;">¡Estamos ansiosos por ver y compartir nuestros preciosos
+                    recuerdos!</p>
+
+                <p style="font-size: 1rem;">Nos complace invitarte a compartir sus imágenes capturadas durante las
+                    festividades de nuestra iglesia. Estamos emocionados de ampliar nuestro álbum visual con momentos
+                    significativos y memorables de nuestras celebraciones. Sus contribuciones no solo enriquecerán
+                    nuestro archivo histórico, sino que también nos permitirán compartir la alegría y la espiritualidad de nuestras festividades con la
+                    comunidad más amplia.</p>
+
+                <p style="font-size: 1rem;">Si cuentas con algunos recuerdos visuales de estas fechas importantes, te
+                    invitamos a enviar tus fotos junto con la fecha y el nombre del evento a nuestro correo electrónico <u>sanmiguelxalisco@gmail.com</u>, o bien, consulta nuestro
+                    apartado de <a href="contactos.html">contáctanos</a> para conocer otros medios.</p>
+
                 
-            <!-- MENU -->
-            
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-
-                    <a id="sma" class="navbar-brand" href="index.html">San Miguel Arcángel</a>
-
-                    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="templo.html">Templos</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a id="ndmenu1" class="nav-link" href="diocesis.html">Nuestra Diócesis</a>
-                                <a id="ndmenu2" class="nav-link" href="diocesis.html">N.D.</a> 
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Organización Pastoral</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Litúrgica</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="sacramentos.html">Sacramentos</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Monaguillos</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Equipo de Litúrgia</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Ministros Extraordinarios</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Social</a>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="trabajando.html">Pastoral de la Salud</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Psicología</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Profética</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="gparroquiales.html">Grupos Parroquiales</a></li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="columbario.html">Columbario</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="galeria.html">Galería</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="contactos.html">Contacto</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="trabajando.html">Catequesis</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    
-                </div>
-                <img id="logomenu" src="imagen/smalogobc.png" alt="Logo" class="navbar-logo d-none d-md-block">
-            </nav>
-
-        </div>
-
-            <!-- CUERPO PAGINA -->
-        
-        <!-- Album (Vista) -->
-        <div id="generalcontainer" class="container mt-5 custom-container">
-            <div class="row section align-items-center">
-        
-                <div class="text-center mb-3">
-                    <h2 style="color: #007bff;">Álbumes Fotográficos</h2>
-                    <p style="font-size: 18px;">Una mirada al pasado...</p>
-                </div>
-
-                <!-- Primer Álbum -->
-                <div class="col-md-4 mb-5">
-                    <div id="album1" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-                        <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
-
-                            <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
-                                <img src="imagen/relleno1.jpg" class="d-block w-100" alt="Imagen 1">
-                            </div>
-
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
-                                <img src="imagen/relleno2.jpg" class="d-block w-100" alt="Imagen 2">
-                            </div>
-
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum1">
-                                <img src="imagen/relleno3.jpg" class="d-block w-100" alt="Imagen 3">
-                            </div>
-
-                        </div>
-                        <p class="text-center mt-3">Nombre álbum 1 <br> DD / MM / AAAA </p>
-                    </div>
-                </div>
-        
-                <!-- Segundo Álbum -->
-                <div class="col-md-4 mb-5">
-                    <div id="album2" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-                        <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum2">
-                            
-                            <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum2">
-                                <img src="imagen/relleno4.jpg" class="d-block w-100" alt="Imagen 1">
-                            </div>
-                            
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum2">
-                                <img src="imagen/relleno5.jpg" class="d-block w-100" alt="Imagen 2">
-                            </div>
-                            
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum2">
-                                <img src="imagen/relleno6.jpg" class="d-block w-100" alt="Imagen 3">
-                            </div>
-
-                        </div>
-                        <p class="text-center mt-3">Nombre álbum 2 <br> DD / MM / AAAA</p>
-                    </div>
-                </div>
-        
-                <!-- Tercer Álbum -->
-                <div class="col-md-4 mb-5">
-                    <div id="album3" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-                        
-                        <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum3">
-                            
-                            <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum3">
-                                <img src="imagen/relleno7.jpg" class="d-block w-100" alt="Imagen 1">
-                            </div>
-                            
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum3">
-                                <img src="imagen/relleno8.jpg" class="d-block w-100" alt="Imagen 2">
-                            </div>
-                            
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum3">
-                                <img src="imagen/relleno9.jpg" class="d-block w-100" alt="Imagen 3">
-                            </div>
-
-                        </div>
-                        <p class="text-center mt-3">Nombre álbum 3 <br> DD / MM / AAAA</p>
-                    </div>
-                </div>
-        
-                <!-- Cuarto Álbum -->
-                <div class="col-md-4 mb-5">
-                    <div id="album4" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-                        <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum4">
-
-                            <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum4">
-                                <img src="imagen/relleno1.jpg" class="d-block w-100" alt="Imagen 1">
-                            </div>
-
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum4">
-                                <img src="imagen/relleno2.jpg" class="d-block w-100" alt="Imagen 2">
-                            </div>
-
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum4">
-                                <img src="imagen/relleno3.jpg" class="d-block w-100" alt="Imagen 3">
-                            </div>
-
-                        </div>
-
-                        <p class="text-center mt-3">Nombre álbum 4</p>
-                    </div>
-                </div>
-
-                <!-- Quinto Álbum -->
-                <div class="col-md-4 mb-5">
-                    <div id="album5" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-                        <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum5">
-
-                            <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum5">
-                                <img src="imagen/relleno4.jpg" class="d-block w-100" alt="Imagen 1">
-                            </div>
-
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum5">
-                                <img src="imagen/relleno5.jpg" class="d-block w-100" alt="Imagen 2">
-                            </div>
-
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum5">
-                                <img src="imagen/relleno6.jpg" class="d-block w-100" alt="Imagen 3">
-                            </div>
-
-                        </div>
-                        
-                        <p class="text-center mt-3">Nombre álbum 5</p>
-                    </div>
-                </div>
-
-                <!-- Sexto Álbum -->
-                <div class="col-md-4 mb-5">
-                    <div id="album6" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-                        <div class="carousel-inner" data-bs-toggle="modal" data-bs-target="#lightboxAlbum6">
-
-                            <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#lightboxAlbum6">
-                                <img src="imagen/relleno7.jpg" class="d-block w-100" alt="Imagen 1">
-                            </div>
-
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum6">
-                                <img src="imagen/relleno8.jpg" class="d-block w-100" alt="Imagen 2">
-                            </div>
-
-                            <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#lightboxAlbum6">
-                                <img src="imagen/relleno9.jpg" class="d-block w-100" alt="Imagen 3">
-                            </div>
-
-                        </div>
-                       
-                        <p class="text-center mt-3">Nombre álbum 6</p>
-                    </div>
-                </div>
 
             </div>
         </div>
-        
-        <!-- Álbum (Grande) -->
+    </div>
 
-        <!-- Primer Álbum -->
-        <div class="modal fade" id="lightboxAlbum1" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        
-                        <div id="carouselAlbum1" class="carousel slide" data-bs-ride="carousel" style="touch-action: none;">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="imagen/relleno1.jpg" class="d-block w-100 img-fluid" alt="Imagen 1" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno2.jpg" class="d-block w-100 img-fluid" alt="Imagen 2" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno3.jpg" class="d-block w-100 img-fluid" alt="Imagen 3" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
+    <!-- Álbum (Grande) -->
+
+    <!-- Primer Álbum -->
+    <div class="modal fade" id="lightboxAlbum1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <div id="carouselAlbum1" class="carousel slide" data-bs-ride="carousel" style="touch-action: none;">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagen/galeria/corpusc1.jpg" class="d-block w-100 img-fluid" alt="Imagen 1"
+                                    style="max-height: 85vh; max-width: 100%; margin: auto;">
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlbum1" data-bs-slide="prev" style="font-weight: bold; margin-left: -20px;">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlbum1" data-bs-slide="next" style="font-weight: bold; margin-right: -20px;">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
+                            <div class="carousel-item">
+                                <img src="imagen/galeria/corpusc2.jpg" class="d-block w-100 img-fluid" alt="Imagen 2"
+                                    style="max-height: 85vh; max-width: 100%; margin: auto;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagen/galeria/corpusc3.jpg" class="d-block w-100 img-fluid" alt="Imagen 3"
+                                    style="max-height: 85vh; max-width: 100%; margin: auto;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagen/galeria/corpusc4.jpg" class="d-block w-100 img-fluid" alt="Imagen 4"
+                                    style="max-height: 85vh; max-width: 100%; margin: auto;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagen/galeria/corpusc5.jpg" class="d-block w-100 img-fluid" alt="Imagen 5"
+                                    style="max-height: 85vh; max-width: 100%; margin: auto;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="imagen/galeria/corpusc6.jpg" class="d-block w-100 img-fluid" alt="Imagen 6"
+                                    style="max-height: 85vh; max-width: 100%; margin: auto;">
+                            </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlbum1"
+                            data-bs-slide="prev" style="font-weight: bold; margin-left: -20px;">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAlbum1"
+                            data-bs-slide="next" style="font-weight: bold; margin-right: -20px;">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Segundo Álbum -->
-        <div class="modal fade" id="lightboxAlbum2" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div id="carouselAlbum2" class="carousel slide" data-bs-ride="carousel" style="touch-action: none;">
-                            
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="imagen/relleno4.jpg" class="d-block w-100 img-fluid" alt="Imagen 1" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno5.jpg" class="d-block w-100 img-fluid" alt="Imagen 2" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno6.jpg" class="d-block w-100 img-fluid" alt="Imagen 3" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                            </div>
+    <i id="scrollToTop" class="bi bi-chevron-up" onclick="scrollToTop()"></i>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlbum2" data-bs-slide="prev" style="font-weight: bold; margin-left: -20px;">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
+    <!-- PIE DE PAGINA -->
 
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlbum2" data-bs-slide="next" style="font-weight: bold; margin-right: -20px;">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">San Miguel Arcángel</div>
+            </div>
+            <div class="footer-info">
+                <p>"San Miguel, espada de la verdad, protégenos"</p>
             </div>
         </div>
+        <p class="text-muted">&copy; 2024 SMA. Todos los derechos reservados.
+            <br><a href="terminos-y-condiciones.html" style="color: white">Términos y Condiciones</a> - <a
+                href="aviso-de-privacidad.html" style="color: white">Aviso de Privacidad</a>
+            <br>Creado con ❤️ para el Reino de Cristo
+        </p>
+    </footer>
 
-        <!-- Tercer Álbum -->
-        <div class="modal fade" id="lightboxAlbum3" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div id="carouselAlbum3" class="carousel slide" data-bs-ride="carousel" style="touch-action: none;">
-                            
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="imagen/relleno7.jpg" class="d-block w-100 img-fluid" alt="Imagen 1" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno8.jpg" class="d-block w-100 img-fluid" alt="Imagen 2" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno9.jpg" class="d-block w-100 img-fluid" alt="Imagen 3" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                            </div>
+    <!-- SCRIPTS -->
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlbum3" data-bs-slide="prev" style="font-weight: bold; margin-left: -20px;">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
+    <script src="general.js"></script>
+    <script src="menu.js"></script>
+    <script src="avisos-slider.js"></script>
 
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlbum3" data-bs-slide="next" style="font-weight: bold; margin-right: -20px;">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Cuarto Álbum -->
-        <div class="modal fade" id="lightboxAlbum4" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-        
-                <div class="modal-content">
-                    <div class="modal-body">
-        
-                        <div id="carouselAlbum4" class="carousel slide" data-bs-ride="carousel" style="touch-action: none;">
-                            <div class="carousel-inner">
-        
-                                <div class="carousel-item active">
-                                    <img src="imagen/relleno1.jpg" class="d-block w-100 img-fluid" alt="Imagen 1" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno2.jpg" class="d-block w-100 img-fluid" alt="Imagen 2" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno3.jpg" class="d-block w-100 img-fluid" alt="Imagen 3" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-        
-                            </div>
-        
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlbum4" data-bs-slide="prev" style="font-weight: bold; margin-left: -20px;">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlbum4" data-bs-slide="next" style="font-weight: bold; margin-right: -20px;">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
-        
-                        </div>
-        
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-        
-        <!-- Quinto Álbum -->
-        <div class="modal fade" id="lightboxAlbum5" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-        
-                <div class="modal-content">
-                    <div class="modal-body">
-        
-                        <div id="carouselAlbum5" class="carousel slide" data-bs-ride="carousel" style="touch-action: none;">
-                            <div class="carousel-inner">
-        
-                                <div class="carousel-item active">
-                                    <img src="imagen/relleno4.jpg" class="d-block w-100 img-fluid" alt="Imagen 1" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno5.jpg" class="d-block w-100 img-fluid" alt="Imagen 2" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno6.jpg" class="d-block w-100 img-fluid" alt="Imagen 3" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-        
-                            </div>
-        
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlbum5" data-bs-slide="prev" style="font-weight: bold; margin-left: -20px;">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlbum5" data-bs-slide="next" style="font-weight: bold; margin-right: -20px;">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
-        
-                        </div>
-        
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-        
-        <!-- Sexto Álbum -->
-        <div class="modal fade" id="lightboxAlbum6" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-        
-                <div class="modal-content">
-                    <div class="modal-body">
-        
-                        <div id="carouselAlbum6" class="carousel slide" data-bs-ride="carousel" style="touch-action: none;">
-                            <div class="carousel-inner">
-        
-                                <div class="carousel-item active">
-                                    <img src="imagen/relleno7.jpg" class="d-block w-100 img-fluid" alt="Imagen 1" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno8.jpg" class="d-block w-100 img-fluid" alt="Imagen 2" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="imagen/relleno9.jpg" class="d-block w-100 img-fluid" alt="Imagen 3" style="max-height: 90vh; max-width: 100%; margin: auto;">
-                                </div>
-        
-                            </div>
-        
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlbum6" data-bs-slide="prev" style="font-weight: bold; margin-left: -20px;">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlbum6" data-bs-slide="next" style="font-weight: bold; margin-right: -20px;">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
-        
-                        </div>
-        
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-
-        <i id="scrollToTop" class="bi bi-arrow-up-circle" onclick="scrollToTop()"></i>
-
-        <!-- PIE DE PAGINA -->
-
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">San Miguel Arcángel</div>
-                </div>
-                <div class="footer-info">
-                    <p>"San Miguel, espada de la verdad, protégenos"</p>
-                </div>
-            </div>
-            <p class="text-muted">&copy; 2024 SMA. Todos los derechos reservados.
-                <br><a href="terminos-y-condiciones.html" style="color: white">Términos y Condiciones</a> - <a href="aviso-de-privacidad.html" style="color: white">Aviso de Privacidad</a>
-                <br>Creado con ❤️ para el Reino de Cristo
-            </p>
-        </footer>
-
-        <!-- SCRIPTS -->
-
-        <script src="general.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-        <script>
-            var album1Carousel = new bootstrap.Carousel(document.getElementById('album1'), {
-                interval: 3000 
-            });
-        
-            var album2Carousel = new bootstrap.Carousel(document.getElementById('album2'), {
-                interval: 3000 
-            });
-        
-            var album3Carousel = new bootstrap.Carousel(document.getElementById('album3'), {
-                interval: 3000 
-            });
-
-            var album4Carousel = new bootstrap.Carousel(document.getElementById('album4'), {
-                interval: 3000 
-            });
-
-            var album5Carousel = new bootstrap.Carousel(document.getElementById('album5'), {
-                interval: 3000 
-            });
-
-            var album6Carousel = new bootstrap.Carousel(document.getElementById('album6'), {
-                interval: 3000 
-            });
-        </script>
-
-    </body>
+</body>
 
 </html>

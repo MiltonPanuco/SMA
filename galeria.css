@@ -28,6 +28,15 @@
         border-radius: 10px; 
     }
 
+    .mt-3 {
+        margin-bottom: 0;
+    }
+
+    .fecha {
+        font-style: italic;
+        font-size: small;
+    }
+
     @media screen and (max-width: 999px) {
         .section {
             margin-right: 10px;

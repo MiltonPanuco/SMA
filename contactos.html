@@ -1,169 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <title>Contacto</title>
-        
-        <link rel="icon" href="imagen/smalogo.jpg" type="image/x-icon">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-        
-        <link rel="stylesheet" type="text/css" href="contactos.css">
-        <link rel="stylesheet" type="text/css" href="complement.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    </head>
+    <title>Contacto</title>
 
-    <body>
+    <link rel="icon" href="imagen/smalogo.jpg" type="image/x-icon">
 
-        <div class="header"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
-            <!-- PANTALLA DE CARGA -->
-    
-            <div class="loader-wrapper">
-                <div class="logopc-wrapper">
+    <link rel="stylesheet" type="text/css" href="contactos.css">
+    <link rel="stylesheet" type="text/css" href="complement.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <!-- PANTALLA DE CARGA -->
+
+        <div class="loader-wrapper">
+            <div class="logopc-wrapper">
                 <img class="logopc" src="imagen/smalogo.jpg" alt="Logo SMA">
                 <div class="loader"></div>
-                </div>  
-                <p>Cargando bendiciones...</p>
             </div>
-
-            <!-- BANNER DE ANUNCIOS -->
-
-            <div id="avisosSlider" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    
-                    <div class="carousel-item active">
-                        <img id="avisoImage1" img src="imagen/aviso1.jpg" class="d-block w-100" alt="Aviso 1">
-                    </div>
-            
-                    <div class="carousel-item">
-                        <img id="avisoImage2" img src="imagen/aviso2.jpg" class="d-block w-100" alt="Aviso 2">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img id="avisoImage3" img src="imagen/aviso3.jpg" class="d-block w-100" alt="Aviso 3">
-                    </div>
-            
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#avisosSlider" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    
-                    <button class="carousel-control-next" type="button" data-bs-target="#avisosSlider" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
-
-                </div>
-            </div>
-                
-            <!-- MENU -->
-            
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-
-                    <a id="sma" class="navbar-brand" href="index.html">San Miguel Arcángel</a>
-
-                    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="templo.html">Templos</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a id="ndmenu1" class="nav-link" href="diocesis.html">Nuestra Diócesis</a>
-                                <a id="ndmenu2" class="nav-link" href="diocesis.html">N.D.</a> 
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">Organización Pastoral</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Litúrgica</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="sacramentos.html">Sacramentos</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Monaguillos</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Equipo de Litúrgia</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Ministros Extraordinarios</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Social</a>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="trabajando.html">Pastoral de la Salud</a></li>
-                                            <li><a class="dropdown-item" href="trabajando.html">Psicología</a></li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Pastoral Profética</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="trabajando.html">Grupos Parroquiales</a></li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a class="nav-link" href="columbario.html">Columbario</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="trabajando.html">Galería</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="contactos.html">Contacto</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="trabajando.html">Catequesis</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                    
-                </div>
-                <img id="logomenu" src="imagen/smalogobc.png" alt="Logo" class="navbar-logo d-none d-md-block">
-            </nav>
-
+            <p>Cargando bendiciones...</p>
         </div>
 
-        <!-- CUERPO DE LA PAGINA -->
+        <div id="avisos-slider-placeholder"></div>
+        <div id="menu-placeholder"></div>
 
-        <div class="grande">
-            <div class="container-fluid">
-                <div class="container-contact contact-container">
-                    
-                    <div class="row">
-                        <h2 class="mb-4"><i class="fas fa-envelope-open-text" ></i> ¡Contáctanos para recibir ayuda<br>más específica!</h2>
-                        <div class="col-md-6">
-                            
-                            <ul class="list-group table horarios-list">
-                                <li class="list-group-item table-row">
-                                <i class="fas fa-phone-alt"></i> <strong>Número de Teléfono:</strong> &nbsp +52 311 218 5228
+    </div>
+
+    <!-- CUERPO DE LA PAGINA -->
+
+    <div class="grande">
+        <div class="container-fluid">
+            <div class="container-contact contact-container">
+
+                <div class="row">
+                    <h2 class="mb-4"><i class="fas fa-envelope-open-text"></i> ¡Contáctanos para recibir ayuda<br>más
+                        específica!</h2>
+                    <div class="col-md-6">
+
+                        <ul class="list-group table horarios-list">
+                            <li class="list-group-item table-row">
+                                <i class="fas fa-phone-alt"></i> <strong>Número de Teléfono:</strong> &nbsp +52 311 218
+                                5228
                             </li>
 
                             <li class="list-group-item table-row">
-                                <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> <a href="https://maps.app.goo.gl/DosuBbt8MDcTP4Rj9">&nbspCalle Niquel #46, Col. Morelos, Xalisco, Nayarit.&nbsp </a>
+                                <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> <a
+                                    href="https://maps.app.goo.gl/DosuBbt8MDcTP4Rj9">&nbspCalle Niquel #46, Col.
+                                    Morelos, Xalisco, Nayarit.&nbsp </a>
                             </li>
 
                             <li class="list-group-item table-row" style="overflow-x: auto;">
-                                <i class="fas fa-envelope"></i> <strong>Correo Electrónico:</strong> &nbsp sanmiguelxalisco@gmail.com
+                                <i class="fas fa-envelope"></i> <strong>Correo Electrónico:</strong> &nbsp
+                                sanmiguelxalisco@gmail.com
                             </li>
 
                             <li class="list-group-item table-row">
@@ -171,220 +69,245 @@
                                 <table class="schedule-table">
                                     <thead style="background-color: transparent;">
                                         <tr>
-                                            <th colspan="2"><i class="far fa-clock"></i> <strong id="horario">Horarios:</strong></th>
+                                            <th colspan="2"><i class="far fa-clock"></i> <strong
+                                                    id="horario">Horarios:</strong></th>
                                         </tr>
                                     </thead>
                                     <tbody style="background-color: transparent;">
-                                            <tr>
-                                                <td><strong>Lunes:</strong></td>
-                                                <td>Cerrado</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Martes:</strong></td>
-                                                <td>04:00 pm - 07:00 pm</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Miércoles:</strong></td>
-                                                <td>
-                                                    <div>10:00 am - 01:00 pm</div>
-                                                    <div>04:00 pm - 07:00 pm</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Jueves:</strong></td>
-                                                <td>
-                                                    <div>10:00 am - 01:00 pm</div>
-                                                    <div>04:00 pm - 07:00 pm</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Viernes:</strong></td>
-                                                <td>04:00 pm - 07:00 pm</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Sábado:</strong></td>
-                                                <td>
-                                                    <div>09:00 am - 12:00 pm</div>
-                                                    <div>04:00 pm - 07:00 pm</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Domingo:</strong></td>
-                                                <td>Cerrado</td>
-                                            </tr>
-                                        </tbody>
+                                        <tr>
+                                            <td><strong>Lunes:</strong></td>
+                                            <td>Cerrado</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Martes:</strong></td>
+                                            <td>04:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Miércoles:</strong></td>
+                                            <td>
+                                                <div>10:00 am - 01:00 pm</div>
+                                                <div>04:00 pm - 07:00 pm</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Jueves:</strong></td>
+                                            <td>
+                                                <div>10:00 am - 01:00 pm</div>
+                                                <div>04:00 pm - 07:00 pm</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Viernes:</strong></td>
+                                            <td>04:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sábado:</strong></td>
+                                            <td>
+                                                <div>09:00 am - 12:00 pm</div>
+                                                <div>04:00 pm - 07:00 pm</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Domingo:</strong></td>
+                                            <td>Cerrado</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
 
                             </li>
 
                             <li class="list-group-item">
                                 <i class="fab fa-whatsapp"></i> <strong>Canal de WhatsApp:</strong>
-                                <a href="https://whatsapp.com/channel/0029VaAYyxiE50Uh2nlP2q2k" target="_blank">&nbspParroquia San Miguel, Xalisco.&nbsp</a>
+                                <a href="https://whatsapp.com/channel/0029VaAYyxiE50Uh2nlP2q2k"
+                                    target="_blank">&nbspParroquia San Miguel, Xalisco.&nbsp</a>
                             </li>
 
                             <li class="list-group-item">
                                 <i class="fab fa-facebook-square"></i> <strong>Página de Facebook:</strong>
-                                <a href="https://www.facebook.com/SanMiguelLomasVerdes?mibextid=ZbWKwL" target="_blank">&nbspSan Miguel Arcángel, Xalisco, Nay.&nbsp</a>
+                                <a href="https://www.facebook.com/SanMiguelLomasVerdes?mibextid=ZbWKwL"
+                                    target="_blank">&nbspSan Miguel Arcángel, Xalisco, Nay.&nbsp</a>
                             </li>
 
-                            </ul>
+                        </ul>
 
-                        </div>
+                    </div>
 
                     <div class="col-md-6 text-center flexCenter">
-                        <img src="imagen/contacto/contacto.jpg" alt="Fotografía de Contacto" class="img-fluid contact-image">
+                        <img src="imagen/contacto/contacto.jpg" alt="Fotografía de Contacto"
+                            class="img-fluid contact-image">
                     </div>
 
                 </div>
 
-                    <div class="row info-area">
-                        <div class="col-md-12">
+                <div class="row info-area">
+                    <div class="col-md-12">
                         <p>
-                            ¡Nos complace que desees conectarte con nosotros! En nuestro camino de fe, apreciamos tu interés y preguntas. 
-                            Siéntete libre de contactarnos para explorar juntos la riqueza y profundidad de nuestra tradición religiosa. 
-                            Estamos aquí para ofrecerte orientación, apoyo y comunidad en tu búsqueda espiritual. Que este encuentro sea 
-                            un espacio de gracia y crecimiento mutuo en el amor y la verdad divina. ¡Esperamos con alegría compartir contigo 
+                            ¡Nos complace que desees conectarte con nosotros! En nuestro camino de fe, apreciamos tu
+                            interés y preguntas.
+                            Siéntete libre de contactarnos para explorar juntos la riqueza y profundidad de nuestra
+                            tradición religiosa.
+                            Estamos aquí para ofrecerte orientación, apoyo y comunidad en tu búsqueda espiritual. Que
+                            este encuentro sea
+                            un espacio de gracia y crecimiento mutuo en el amor y la verdad divina. ¡Esperamos con
+                            alegría compartir contigo
                             esta maravillosa jornada de fe!
                         </p>
-                        </div>
                     </div>
-                
                 </div>
+
             </div>
         </div>
+    </div>
 
-        <!-- PEQUEÑO -->
+    <!-- PEQUEÑO -->
 
-        <div class="pequeño">
-            <div class="container-fluid">
-                <div class="container-contact contact-container">
-                    <div class="row">
-                
-                        <div class="col-md-6">
-                            <h2 class="mb-4"><i class="fas fa-envelope-open-text"></i> ¡Contáctanos para recibir ayuda más específica!</h2>
+    <div class="pequeño">
+        <div class="container-fluid">
+            <div class="container-contact contact-container">
+                <div class="row">
 
-                            <ul class="list-group table horarios-list">
-                                
-                                <li class="list-group-item table-row" style="overflow-x: auto; justify-content: center;">
-                                    <i class="fas fa-phone-alt"></i> <strong>Número de Teléfono:</strong><br> +52 311 218 5228
-                                </li>
+                    <div class="col-md-6">
+                        <h2 class="mb-4"><i class="fas fa-envelope-open-text"></i> ¡Contáctanos para recibir ayuda más
+                            específica!</h2>
 
-                                <li class="list-group-item table-row" style="overflow-x: auto; justify-content: center;">
-                                    <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong><br> Calle Niquel #46, Col. Morelos, Xalisco, Nayarit.
-                                </li>
+                        <ul class="list-group table horarios-list">
 
-                                <li class="list-group-item table-row" style="overflow-x: auto; justify-content: center;">
-                                    <i class="fas fa-envelope"></i> <strong>Correo Electrónico:</strong><br> sanmiguelxalisco@gmail.com
-                                </li>
-                                
-                                <li class="list-group-item table-row" style="overflow-x: auto; justify-content: center;">
-                                    <table class="schedule-table lol">
-                                        <thead style="background-color: transparent;">
-                                            <tr>
-                                                <th colspan="2"><i class="far fa-clock"></i> <strong id="horario">Horarios:</strong></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody style="background-color: transparent;">
-                                            <tr>
-                                                <td><strong>Lunes:</strong></td>
-                                                <td>Cerrado</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Martes:</strong></td>
-                                                <td>04:00 pm - 07:00 pm</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Miércoles:</strong></td>
-                                                <td>
-                                                    <div>10:00 am - 01:00 pm</div>
-                                                    <div>04:00 pm - 07:00 pm</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Jueves:</strong></td>
-                                                <td>
-                                                    <div>10:00 am - 01:00 pm</div>
-                                                    <div>04:00 pm - 07:00 pm</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Viernes:</strong></td>
-                                                <td>04:00 pm - 07:00 pm</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Sábado:</strong></td>
-                                                <td>
-                                                    <div>09:00 am - 12:00 pm</div>
-                                                    <div>04:00 pm - 07:00 pm</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Domingo:</strong></td>
-                                                <td>Cerrado</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </li>
+                            <li class="list-group-item table-row" style="overflow-x: auto; justify-content: center;">
+                                <i class="fas fa-phone-alt"></i> <strong>Número de Teléfono:</strong><br> +52 311 218
+                                5228
+                            </li>
 
-                                <li class="list-group-item">
-                                    <i class="fab fa-whatsapp"></i> <strong>Canal de WhatsApp:</strong><br>
-                                    <a href="https://whatsapp.com/channel/0029VaAYyxiE50Uh2nlP2q2k" target="_blank">&nbspParroquia San Miguel, Xalisco&nbsp</a>
-                                </li>
+                            <li class="list-group-item table-row" style="overflow-x: auto; justify-content: center;">
+                                <i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong><br> Calle Niquel #46,
+                                Col. Morelos, Xalisco, Nayarit.
+                            </li>
 
-                                <li class="list-group-item">
-                                    <i class="fab fa-facebook-square"></i> <strong>Página de Facebook:</strong><br>
-                                    <a href="https://www.facebook.com/SanMiguelLomasVerdes?mibextid=ZbWKwL" target="_blank">&nbspSan Miguel Arcángel, Xalisco, Nay.&nbsp</a>
-                                </li>
+                            <li class="list-group-item table-row" style="overflow-x: auto; justify-content: center;">
+                                <i class="fas fa-envelope"></i> <strong>Correo Electrónico:</strong><br>
+                                sanmiguelxalisco@gmail.com
+                            </li>
 
-                            </ul>
+                            <li class="list-group-item table-row" style="overflow-x: auto; justify-content: center;">
+                                <table class="schedule-table lol">
+                                    <thead style="background-color: transparent;">
+                                        <tr>
+                                            <th colspan="2"><i class="far fa-clock"></i> <strong
+                                                    id="horario">Horarios:</strong></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background-color: transparent;">
+                                        <tr>
+                                            <td><strong>Lunes:</strong></td>
+                                            <td>Cerrado</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Martes:</strong></td>
+                                            <td>04:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Miércoles:</strong></td>
+                                            <td>
+                                                <div>10:00 am - 01:00 pm</div>
+                                                <div>04:00 pm - 07:00 pm</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Jueves:</strong></td>
+                                            <td>
+                                                <div>10:00 am - 01:00 pm</div>
+                                                <div>04:00 pm - 07:00 pm</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Viernes:</strong></td>
+                                            <td>04:00 pm - 07:00 pm</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Sábado:</strong></td>
+                                            <td>
+                                                <div>09:00 am - 12:00 pm</div>
+                                                <div>04:00 pm - 07:00 pm</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Domingo:</strong></td>
+                                            <td>Cerrado</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
 
-                        </div>
+                            <li class="list-group-item">
+                                <i class="fab fa-whatsapp"></i> <strong>Canal de WhatsApp:</strong><br>
+                                <a href="https://whatsapp.com/channel/0029VaAYyxiE50Uh2nlP2q2k"
+                                    target="_blank">&nbspParroquia San Miguel, Xalisco&nbsp</a>
+                            </li>
+
+                            <li class="list-group-item">
+                                <i class="fab fa-facebook-square"></i> <strong>Página de Facebook:</strong><br>
+                                <a href="https://www.facebook.com/SanMiguelLomasVerdes?mibextid=ZbWKwL"
+                                    target="_blank">&nbspSan Miguel Arcángel, Xalisco, Nay.&nbsp</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
 
                     <div class="col-md-6 text-center">
-                        <img src="imagen/contacto/contacto.jpg" alt="Fotografía de Contacto" class="img-fluid contact-image">
+                        <img src="imagen/contacto/contacto.jpg" alt="Fotografía de Contacto"
+                            class="img-fluid contact-image">
                     </div>
 
-                    </div>
-
-                    <div class="row info-area">
-                        <div class="col-md-12">
-                            <p>
-                                ¡Nos complace que desees conectarte con nosotros! En nuestro camino de fe, apreciamos tu interés y preguntas. 
-                                Siéntete libre de contactarnos para explorar juntos la riqueza y profundidad de nuestra tradición religiosa. 
-                                Estamos aquí para ofrecerte orientación, apoyo y comunidad en tu búsqueda espiritual. Que este encuentro sea 
-                                un espacio de gracia y crecimiento mutuo en el amor y la verdad divina. ¡Esperamos con alegría compartir contigo 
-                                esta maravillosa jornada de fe!
-                            </p>
-                        </div>
-                    </div>
-            
                 </div>
+
+                <div class="row info-area">
+                    <div class="col-md-12">
+                        <p>
+                            ¡Nos complace que desees conectarte con nosotros! En nuestro camino de fe, apreciamos tu
+                            interés y preguntas.
+                            Siéntete libre de contactarnos para explorar juntos la riqueza y profundidad de nuestra
+                            tradición religiosa.
+                            Estamos aquí para ofrecerte orientación, apoyo y comunidad en tu búsqueda espiritual. Que
+                            este encuentro sea
+                            un espacio de gracia y crecimiento mutuo en el amor y la verdad divina. ¡Esperamos con
+                            alegría compartir contigo
+                            esta maravillosa jornada de fe!
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
 
-        <i id="scrollToTop" class="bi bi-arrow-up-circle" onclick="scrollToTop()"></i>
+    <i id="scrollToTop" class="bi bi-chevron-up" onclick="scrollToTop()"></i>
 
-        <!-- PIE DE PAGINA -->
+    <!-- PIE DE PAGINA -->
 
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-logo">San Miguel Arcángel</div>
-                </div>
-                <div class="footer-info">
-                    <p>"San Miguel, protector celestial, guíanos con tu luz"</p>
-                </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">San Miguel Arcángel</div>
             </div>
-            <p class="text-muted">&copy; 2024 SMA. Todos los derechos reservados.
-                <br><a href="terminos-y-condiciones.html" style="color: white">Términos y Condiciones</a> - <a href="aviso-de-privacidad.html" style="color: white">Aviso de Privacidad</a>
-                <br>Creado con ❤️ para el Reino de Cristo
-            </p>
-        </footer>
+            <div class="footer-info">
+                <p>"San Miguel, protector celestial, guíanos con tu luz"</p>
+            </div>
+        </div>
+        <p class="text-muted">&copy; 2024 SMA. Todos los derechos reservados.
+            <br><a href="terminos-y-condiciones.html" style="color: white">Términos y Condiciones</a> - <a
+                href="aviso-de-privacidad.html" style="color: white">Aviso de Privacidad</a>
+            <br>Creado con ❤️ para el Reino de Cristo
+        </p>
+    </footer>
 
-        <!-- SCRIPTS -->
+    <!-- SCRIPTS -->
 
-        <script src="general.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="general.js"></script>
+    <script src="menu.js"></script>
+    <script src="avisos-slider.js"></script>
 
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
