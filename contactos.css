@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     body { 
         background-color: #f8f9fa; 
         color: #495057; 
@@ -138,6 +139,147 @@
             margin-bottom: 50px;
         }
 
+=======
+    body { 
+        background-color: #f8f9fa; 
+        color: #495057; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        align-items: center;
+    }
+
+    .container-contact {
+        margin: 70px;
+    }
+
+    .flexCenter {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-container {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+    .contact-container h2 {
+        color: #007bff; 
+    }
+
+    .list-group-item i {
+        color: #17a2b8; 
+        margin-right: 10px;
+        font-size: 1.5em;
+    }
+
+    .list-group-item a {
+        color: #007bff; 
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .list-group-item a:hover {
+        text-decoration: underline;
+    }
+
+    .list-group-item {
+        background-color: #e2e3e5;
+        border: none;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-image {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+        float: right;
+    }
+
+    .mb-4 {
+        text-align: center;
+        color: #007bff; 
+    }
+
+    .info-area {
+        margin-top: 20px;
+    }
+
+    .info-area p {
+        text-align: justify;
+        color: black;
+    }
+
+    .horarios {
+        margin-top: 20px;
+    }
+
+    .horarios h3 {
+        color: #1d1f1d; 
+    }
+
+    .semanal li {
+        background-color: transparent;
+        padding: 1px;
+    }
+
+    .pequeño {
+        display: none;
+    }
+
+    .schedule-table {
+        width: 100%;
+        text-align: center;
+    }
+    .schedule-table th, .schedule-table td {
+        border: 5px solid #ddd;
+    }
+   
+    
+    @media screen and (max-width: 999px) {
+        .container-contact .row {
+            flex-direction: column;
+        }
+        .container-contact .col-md-6 {
+            width: 100%;
+        }
+        .contact-image {
+            margin-top: 20px; 
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .pequeño {
+            display: flex;
+        }
+
+        .grande {
+            display: none;
+        }
+
+        .list-group-item {
+            display: block;
+            text-align: center;
+        }
+
+        .semanal li {
+            list-style: none;
+            margin-left: -25px;
+        }
+
+        .container-contact {
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+>>>>>>> origin/main
 =======
     body { 
         background-color: #f8f9fa; 

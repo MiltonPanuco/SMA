@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     body {
         background-color: #f8f9fa;
     }
@@ -57,6 +58,66 @@
             margin-left: 10px;
         }
 
+=======
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .custom-container {
+        box-sizing: border-box; 
+    }
+
+    .section {
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .social-media-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mb-4 {
+        text-align: center;
+    }
+
+    .section img {
+        margin: 15px 15px 15px 0px;
+    }
+
+    .section p {
+        margin-left: 15px;
+        text-align: justify;
+    }
+
+    .pr-0 img, .pl-0 img {
+        display: block;
+        margin: auto;
+    }
+
+    .text-dark {
+        margin-right: 10px;
+    }
+
+    #logowb, #logofb {
+        margin-left: 10px;
+    }
+
+    @media screen and (max-width: 999px) {
+        #icon {
+            display: none;
+            text-align: center;
+        }
+
+        .section {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+>>>>>>> origin/main
 =======
     body {
         background-color: #f8f9fa;
