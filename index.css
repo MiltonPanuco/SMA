@@ -1,4 +1,3 @@
-    
     .carousel-item img {
       width: 100%;
       height: auto;
@@ -10,7 +9,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); 
+      background-color: rgba(0, 0, 0, 0.5);
       padding: 20px;
       display: flex;
       flex-direction: column;
@@ -21,9 +20,9 @@
 
     .overlay-text {
       color: white;
-      font-size: 48px; 
+      font-size: 48px;
       font-weight: bold;
-      font-family: 'Lucida Bright', serif; 
+      font-family: 'Lucida Bright', serif;
       margin-bottom: 20px;
     }
 
@@ -35,12 +34,12 @@
 
     .contact-link {
       position: absolute;
-      bottom: 20px; 
+      bottom: 20px;
       right: 20px;
       color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
       font-size: 14px;
-      transition: color 0.3s ease; 
+      transition: color 0.3s ease;
     }
 
     .contact-link:hover {
@@ -49,12 +48,12 @@
 
     .mas-link {
       position: absolute;
-      bottom: 20px; 
+      bottom: 20px;
       left: 20px;
       color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
       font-size: 14px;
-      transition: color 0.3s ease; 
+      transition: color 0.3s ease;
     }
 
     .mas-link:hover {
@@ -78,23 +77,51 @@
     }
 
     @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-50px); }
-      to { opacity: 1; transform: translateX(0); }
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @keyframes fadeInRight {
-      from { opacity: 0; transform: translateX(50px); }
-      to { opacity: 1; transform: translateX(0); }
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 768px) {
@@ -107,10 +134,14 @@
       }
 
       .carousel-item img {
-        height: 100vh; /* La altura es igual al 100% del ancho de la ventana */
-        max-height: 100%; /* Establece una altura máxima para asegurarse de que la imagen no se desborde */
-        object-fit: cover; /* Hace zoom en la imagen para cubrir el contenedor sin distorsionar */
-        object-position: center; /* Centra la imagen */
+        height: 100vh;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .particular img {
+        object-position: 15% !important;
       }
 
     }
@@ -118,23 +149,24 @@
     .container {
       width: 90%;
       margin: 0 auto;
-  }
-  
-  .image-container, .image-container2 {
+    }
+
+    .image-container,
+    .image-container2 {
       display: flex;
       padding: 10px;
       justify-content: space-between;
       overflow: hidden;
-  }
-  
-  .image-wrapper {
+    }
+
+    .image-wrapper {
       margin: 0 10px;
       position: relative;
       text-align: center;
       color: white;
-  }
-  
-  .image-title {
+    }
+
+    .image-title {
       position: absolute;
       bottom: 10px;
       left: 0;
@@ -147,9 +179,9 @@
       z-index: 2;
       transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
       text-align: center;
-  }
-  
-  .image-description {
+    }
+
+    .image-description {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -164,88 +196,188 @@
       z-index: 1;
       text-align: center;
       opacity: 0;
-  }
-  
-  .image-wrapper a {
-      display: block; 
-      text-decoration: none; 
-      color: inherit; /* Hereda el color del texto del contenedor */
-  }
+    }
 
-  .image-wrapper:hover .image-description {
+    .image-wrapper a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .image-wrapper:hover .image-description {
       transform: translateY(0);
       opacity: 1;
-  }
-  
-  .image-wrapper:hover .image-title {
+    }
+
+    .image-wrapper:hover .image-title {
       bottom: 50px;
       transform: translateY(-10px);
       opacity: 1;
-  }
-  
-  .bw-image {
+    }
+
+    .bw-image {
       filter: grayscale(100%);
       transition: filter 0.5s, transform 0.5s;
       width: 100%;
       height: auto;
       transform-origin: center center;
       border-radius: 10px;
-  }
-  
-  .image-wrapper:hover .bw-image {
+    }
+
+    .image-wrapper:hover .bw-image {
       filter: grayscale(0%);
       transform: scale(1.01) rotate(0.5deg);
-  }
-  
-  .little {
+    }
+
+    .little {
       display: none;
       margin-top: 50px;
       margin-bottom: 50px;
-  }
-  
-  .big {
+    }
+
+    .big {
       margin-top: 50px;
       margin-bottom: 50px;
-  }
+    }
 
-  @media (max-width: 768px) {
+    @media (max-width: 768px) {
       .big {
-          display: none;
+        display: none;
       }
-  
+
       .little {
-          display: flex;
+        display: flex;
       }
-  
+
       .image-container {
-          display: block;
+        display: block;
       }
-  
+
       .image-wrapper {
-          margin: 15px 0;
+        margin: 15px 0;
       }
-  
+
       .image-wrapper.large {
-          flex: 0 0 calc(100% - 20px);
-          max-width: 100%;
-          margin-bottom: 20px;
+        flex: 0 0 calc(100% - 20px);
+        max-width: 100%;
+        margin-bottom: 20px;
       }
-  
+
       .image-description {
-          opacity: 0;
-          transform: translateY(100%);
+        opacity: 0;
+        transform: translateY(100%);
       }
-  
+
       .image-wrapper:hover .image-description {
-          opacity: 1;
-          transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
       }
-  
+
       .image-wrapper:hover .image-title {
-          bottom: 50px;
-          transform: translateY(-10px);
-          opacity: 1;
+        bottom: 50px;
+        transform: translateY(-10px);
+        opacity: 1;
       }
-  }
-  
-    
+    }
+
+
+
+    body {
+      overflow: auto;
+    }
+
+    .overlay-icon {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 101;
+      cursor: pointer;
+    }
+
+    .con1 {
+      height: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #CCCCCC;
+    }
+
+    .con2 {
+
+
+      height: 70%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .app {
+      width: 100%;
+      height: 100%;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .app-header {
+      text-align: center;
+    }
+
+    .app-header h3 {
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+
+    .app-header h4 {
+      font-size: .9rem;
+      padding-right: 10%;
+      padding-left: 10%;
+     }
+
+    .app-name {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .app-description {
+      font-size: .9rem;
+      color: #777;
+      margin-top: 5px;
+    }
+
+    .apps-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 100vh;
+      background-color: #fff;
+      z-index: 100;
+      overflow-x: hidden;
+      transition: width 0.3s ease-out;
+    }
+
+    .apps-container.show {
+      width: 100%;
+    }
+
+    .element {
+      width: calc(33.33% - 10px);
+      margin-left: 5px;
+      margin-right: 5px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .element img {
+      width: 100px;
+      height: 100px;
+      margin: 5% 0 5% 0;
+      border-radius: 10%;
+    }

@@ -1,103 +1,128 @@
 .card {
-    border: none;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-cedula {
+  font-size: 1rem;
+  color: gray;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 10% 20%;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.service-icon {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.service-title {
+  font-size: 1.5em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.service-description {
+  font-size: 1.1em;
+  color: black;
+}
+
+.service-description {
+  font-size: 1.1em;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: black;
+}
+
+.section h2 {
+  color: black;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section p {
+  text-align: center;
+}
+
+.extra-margin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #F0F0F0;
+}
+
+.container.text-center {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container.text-center h1 {
+  font-size: 2.5rem;
+  color: #007bff; /* Azul */
+  margin-bottom: 10px;
+}
+
+.container.text-center p.lead {
+  font-size: 1.2rem;
+  color: black; /* Texto oscuro */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.mg {
+  margin: 0 15px 0 15px;
+}
+
+@media (max-width: 999px) {
+  .card {
+    margin: 15px;
   }
+
   
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .card-img-top {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: black;
-    font-weight: bold;
-    text-align: center; 
-  }
-
-  .card-text {
-    font-size: 1rem;
-    color: black;
-    margin-bottom: 5px;
-    text-align: center; 
-  }
-
-  .btn {
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: #fff;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 10% 20%; 
-  }
-
-  .btn:hover {
-    background-color: #0056b3;
-  }
-
-
-  .section-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.consultoria-info {
-    background-color: #f0f0f0; /* Fondo gris claro */
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
-    margin-bottom: 30px;
-    width: 100%; /* Abarca el 100% del ancho disponible */
-}
-
-.icon-container {
-    margin-right: 20px;
-}
-
-.icon-container i {
-    color: #007bff;
-}
-
-.consultoria-content {
-    display: flex;
-    flex-direction: column;
-    flex: 1; 
-}
-
-.consultoria-items {
-    display: flex;
-    width: 100%; 
-    justify-content: space-between;
-}
-
-.consultoria-item {
-    flex: 1; 
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.bullet {
-    font-size: 1.2rem;
-    color: #007bff;
-    margin-right: 10px;
-}
-
-.consultoria-item .bullet {
-    display: none; 
 }
