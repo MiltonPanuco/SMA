@@ -42,7 +42,7 @@
 
         <div class="hero">
             <div class="overlay"></div>
-            <h1 class="text-center mb-4">Columbario<br>Inmaculada Concepción</h1>
+            <h1 class="text-center mb-4 hidden">Columbario<br>Inmaculada Concepción</h1>
             <img src="imagen/columbario/cblancosf.png" alt="Logotipo" class="hero-logo">
         </div>
 
@@ -50,7 +50,7 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 hidden">
                         <h2>Sobre Nosotros</h2>
                         <p>El columbario de la Inmaculada Concepción será un espacio sagrado y sereno, diseñado para
                             ofrecer un ambiente de paz y reflexión. Estará ubicado en un entorno tranquilo y rodeado de
@@ -63,7 +63,7 @@
                             hicieron el mal, a resurrección de condenación." <i>Juan 5, 28-29</i></p>
                     </div>
 
-                    <div class="col-md-6 flexCenter">
+                    <div class="col-md-6 flexCenter hidden">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
                             <div class="carousel-indicators">
@@ -125,7 +125,7 @@
             <div class="container">
                 <div class="row text-center">
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 hidden">
                         <i class="bi bi-flower1 service-icon"></i>
                         <h3 class="service-title">Lugar Digno</h3>
                         <p class="service-description">Estará ubicado en un entorno sereno y tranquilo, con una
@@ -133,7 +133,7 @@
                             espacio de descanso digno y respetuoso.</p>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 hidden">
                         <i class="bi bi-heart service-icon"></i>
                         <h3 class="service-title">Atención Personalizada</h3>
                         <p class="service-description">Ofreceremos asesoramiento individualizado y ceremonias religiosas
@@ -141,7 +141,7 @@
                             apoyo emocional en cada paso del proceso.</p>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 hidden">
                         <i class="bi bi-building service-icon"></i>
                         <h3 class="service-title">Instalaciones Modernas</h3>
                         <p class="service-description">Contaremos con tecnología innovadora, diseño ergonómico y un
@@ -157,13 +157,13 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col text-center">
+                    <div class="col text-center hidden">
 
                         <h2>Columbario A Futuro</h2>
                         <div class="video-container">
                             <video controls>
                                 <source src="imagen/columbario/columbariovideo.mp4" type="video/mp4"
-                                    style="background-color: black;">
+                                    style="background-color: black;" id="vidio">
                                 Tu navegador no soporta la reproducción de videos.
                             </video>
                         </div>
@@ -178,7 +178,7 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 hidden hidden">
                         <div class="col text-center">
                             <h2>Contáctenos</h2>
                             <p>Para conocer más contáctenos a través de nuestras redes sociales, número telefónico o
@@ -187,8 +187,8 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="accordion" id="priceAccordion">
+                    <div class="col-md-6 hidden">
+                        <div class="accordion " id="priceAccordion">
 
                             <h2> Criptas Disponibles </h2>
 
@@ -229,6 +229,8 @@
         </div>
 
     </div>
+
+    <!-- BOTON SCROLL -->
 
     <i id="scrollToTop" class="bi bi-chevron-up" onclick="scrollToTop()"></i>
 

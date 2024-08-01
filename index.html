@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <title>San Miguel Arcángel</title>
 
     <link rel="icon" href="imagen/smalogo.jpg" type="image/x-icon">
@@ -14,6 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
 
     <link rel="stylesheet" type="text/css" href="complement.css">
     <link rel="stylesheet" type="text/css" href="index.css">
@@ -71,13 +74,14 @@
 
             <div class="carousel-item">
 
-                <img src="imagen/index/fondoc.jpg" class="d-block w-100" alt="Fondo 3">
+                <img src="imagen/index/fondotalleres.jpg" class="d-block w-100" alt="Fondo 3">
 
-                <div class="overlay">
-                    <div class="overlay-text animated-text-3">Monaguillos San Miguel</div>
-                    <div class="subtext animated-text-4">¡Sirve a Dios cada vez más cerca!</div>
-                    <a href="contactos.html" class="contact-link animate__animated animate__fadeInUp">Contáctanos</a>
-                    <a href="trabajando.html" class="mas-link animate__animated animate__fadeInUp">Conoce Más</a>
+                <div class="overlay" onclick="window.location.href='talleres.html';">
+                    <div class="overlay-text animated-text-3">Talleres Cristianos</div>
+                    <div class="subtext animated-text-4">¡Vive una experiencia diferente!</div>
+
+                    <a href="https://wa.me/+5213112185228?text=Información%20sobre%20tallere%20cristianos." class="contact-link animate__animated animate__fadeInUp" target="_blank">Contáctanos</a>
+                    <a href="contactos.html" class="mas-link animate__animated animate__fadeInUp">Conoce Más</a>
                 </div>
 
             </div>
@@ -86,7 +90,7 @@
 
                 <img src="imagen/index/fondob.jpg" class="d-block w-100" alt="Fondo 2">
 
-                <div class="overlay">
+                <div class="overlay" onclick="window.location.href='psicologia.html';">
                     <div class="overlay-text animated-text-2">Psicología Cristiana</div>
                     <div class="subtext animated-text-1">Acompañamiento profesional psicológico desde la fe</div>
                     <a href="contactos.html" class="contact-link animate__animated animate__fadeInUp">Contáctanos</a>
@@ -152,7 +156,7 @@
             <div class="image-container hidden">
 
                 <div class="image-wrapper">
-                    <a href="https://catequesis.sanmiguelxalisco.com" target="_blank">
+                    <a href="catequesis.html" target="_blank">
                         <img src="imagen/index/Bcatequesis.jpg" alt="Imagen Catequesis" class="bw-image">
                         <div class="image-title">Catequesis</div>
                         <div class="image-description">Nútrete de la Palabra de Dios</div>
@@ -203,7 +207,7 @@
                 </div>
 
                 <div class="image-wrapper hidden">
-                    <a href="https://catequesis.sanmiguelxalisco.com" target="_blank">
+                    <a href="catequesis.html" target="_blank">
                         <img src="imagen/index/Lcatequesis.jpg" alt="Imagen Catequesis" class="bw-image">
                         <div class="image-title">Catequesis</div>
                         <div class="image-description">Nútrete de la Palabra de Dios</div>
@@ -223,14 +227,12 @@
         </div>
     </div>
 
-    <i id="scrollToTop" class="bi bi-chevron-up" onclick="scrollToTop()"></i>
-
     <!-- PESTAÑA APPS -->
 
     <div class="container-fluid">
         <div class="apps-container" id="appsContainer">
 
-            <div class="app">
+            <div class="app seven">
 
                 <div class="con1">
                     <div class="app-header">
@@ -241,7 +243,7 @@
                             contigo. Por ello, hemos seleccionado aplicaciones que enriquecen tu vida espiritual con
                             acceso a la Biblia en cualquier momento y recursos como meditaciones diarias, devocionales y
                             guías para la oración.</h4>
-                    </div>
+                        </div>
                 </div>
 
                 <div class="con2">
@@ -252,11 +254,14 @@
                             <div class="slide-index">
                                 <div class="card">
                                     
-                                    <a href="https://play.google.com/store/apps/details?id=com.itsharedservices.hdsmyc.app&hl=es_US&pli=1">
+                                    <a href="https://horariosdemisa.com" target="_blank">
                                     <div class="card-content">
                                         <h3>Horarios de Misa</h3>
                                         <h4>Encontrar misas</h4>
-                                        <img src="imagen/app1.png" alt="App 1">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app1.png" alt="App 1">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Encuentra las iglesias católicas cerca de ti y sus horarios de misa."</p>
                                     </div>
                                     </a>
@@ -267,11 +272,14 @@
                             <div class="slide-index">
                                 <div class="card">
 
-                                    <a href="https://play.google.com/store/apps/details?id=tepteev.ihar.la_biblia_at.AOUGBEWUVNKRBFSK&hl=es_US">
+                                    <a href="https://play.google.com/store/apps/details?id=tepteev.ihar.la_biblia_at.AOUGBEWUVNKRBFSK&hl=es_US" target="_blank">
                                     <div class="card-content">
                                         <h3>La Biblia</h3>
                                         <h4>De Jerusalén</h4>
-                                        <img src="imagen/app2.png" alt="App 2">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app2.png" alt="App 2">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Lectura de hoy, versículo diario, la biblia en audio, offline."</p>
                                     </div>
                                     </a>
@@ -282,11 +290,14 @@
                             <div class="slide-index">
                                 <div class="card">
 
-                                    <a href="https://play.google.com/store/apps/details?id=app.hallow.android&hl=es_US">
+                                    <a href="https://hallow.com/es/" target="_blank">
                                     <div class="card-content">
                                         <h3>Hallow</h3>
                                         <h4>Meditación Católica</h4>
-                                        <img src="imagen/app3.png" alt="App 3">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app3.png" alt="App 3">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Rezar el rosario, oraciones para dormir e historias bíblicas católicas."</p>
                                     </div>
                                     </a>
@@ -297,11 +308,14 @@
                             <div class="slide-index">
                                 <div class="card">
                                     
-                                    <a href="https://play.google.com/store/apps/details?id=com.itsharedservices.hdsmyc.app&hl=es_US&pli=1">
+                                    <a href="https://horariosdemisa.com" target="_blank">
                                     <div class="card-content">
                                         <h3>Horarios de Misa</h3>
                                         <h4>Encontrar misas</h4>
-                                        <img src="imagen/app1.png" alt="App 1">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app1.png" alt="App 1">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Encuentra las iglesias católicas cerca de ti y sus horarios de misa."</p>
                                     </div>
                                     </a>
@@ -312,11 +326,14 @@
                             <div class="slide-index">
                                 <div class="card">
 
-                                    <a href="https://play.google.com/store/apps/details?id=tepteev.ihar.la_biblia_at.AOUGBEWUVNKRBFSK&hl=es_US">
+                                    <a href="https://play.google.com/store/apps/details?id=tepteev.ihar.la_biblia_at.AOUGBEWUVNKRBFSK&hl=es_US" target="_blank">
                                     <div class="card-content">
                                         <h3>La Biblia</h3>
                                         <h4>De Jerusalén</h4>
-                                        <img src="imagen/app2.png" alt="App 2">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app2.png" alt="App 2">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Lectura de hoy, versículo diario, la biblia en audio, offline."</p>
                                     </div>
                                     </a>
@@ -327,11 +344,14 @@
                             <div class="slide-index">
                                 <div class="card">
 
-                                    <a href="https://play.google.com/store/apps/details?id=app.hallow.android&hl=es_US">
+                                    <a href="https://hallow.com/es/" target="_blank">
                                     <div class="card-content">
                                         <h3>Hallow</h3>
                                         <h4>Meditación Católica</h4>
-                                        <img src="imagen/app3.png" alt="App 3">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app3.png" alt="App 3">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Rezar el rosario, oraciones para dormir e historias bíblicas católicas."</p>
                                     </div>
                                     </a>
@@ -344,11 +364,14 @@
                             <div class="slide-index">
                                 <div class="card">
                                     
-                                    <a href="https://play.google.com/store/apps/details?id=com.itsharedservices.hdsmyc.app&hl=es_US&pli=1">
+                                    <a href="https://horariosdemisa.com" target="_blank">
                                     <div class="card-content">
                                         <h3>Horarios de Misa</h3>
                                         <h4>Encontrar misas</h4>
-                                        <img src="imagen/app1.png" alt="App 1">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app1.png" alt="App 1">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Encuentra las iglesias católicas cerca de ti y sus horarios de misa."</p>
                                     </div>
                                     </a>
@@ -359,11 +382,14 @@
                             <div class="slide-index">
                                 <div class="card">
 
-                                    <a href="https://play.google.com/store/apps/details?id=tepteev.ihar.la_biblia_at.AOUGBEWUVNKRBFSK&hl=es_US">
+                                    <a href="https://play.google.com/store/apps/details?id=tepteev.ihar.la_biblia_at.AOUGBEWUVNKRBFSK&hl=es_US" target="_blank">
                                     <div class="card-content">
                                         <h3>La Biblia</h3>
                                         <h4>De Jerusalén</h4>
-                                        <img src="imagen/app2.png" alt="App 2">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app2.png" alt="App 2">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Lectura de hoy, versículo diario, la biblia en audio, offline."</p>
                                     </div>
                                     </a>
@@ -374,11 +400,14 @@
                             <div class="slide-index">
                                 <div class="card">
 
-                                    <a href="https://play.google.com/store/apps/details?id=app.hallow.android&hl=es_US">
+                                    <a href="https://hallow.com/es/" target="_blank">
                                     <div class="card-content">
                                         <h3>Hallow</h3>
                                         <h4>Meditación Católica</h4>
-                                        <img src="imagen/app3.png" alt="App 3">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app3.png" alt="App 3">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Rezar el rosario, oraciones para dormir e historias bíblicas católicas."</p>
                                     </div>
                                     </a>
@@ -389,11 +418,14 @@
                             <div class="slide-index">
                                 <div class="card">
                                     
-                                    <a href="https://play.google.com/store/apps/details?id=com.itsharedservices.hdsmyc.app&hl=es_US&pli=1">
+                                    <a href="https://horariosdemisa.com" target="_blank">
                                     <div class="card-content">
                                         <h3>Horarios de Misa</h3>
                                         <h4>Encontrar misas</h4>
-                                        <img src="imagen/app1.png" alt="App 1">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app1.png" alt="App 1">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Encuentra las iglesias católicas cerca de ti y sus horarios de misa."</p>
                                     </div>
                                     </a>
@@ -404,11 +436,14 @@
                             <div class="slide-index">
                                 <div class="card">
 
-                                    <a href="https://play.google.com/store/apps/details?id=tepteev.ihar.la_biblia_at.AOUGBEWUVNKRBFSK&hl=es_US">
+                                    <a href="https://play.google.com/store/apps/details?id=tepteev.ihar.la_biblia_at.AOUGBEWUVNKRBFSK&hl=es_US" target="_blank">
                                     <div class="card-content">
                                         <h3>La Biblia</h3>
                                         <h4>De Jerusalén</h4>
-                                        <img src="imagen/app2.png" alt="App 2">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app2.png" alt="App 2">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Lectura de hoy, versículo diario, la biblia en audio, offline."</p>
                                     </div>
                                     </a>
@@ -419,11 +454,14 @@
                             <div class="slide-index">
                                 <div class="card">
 
-                                    <a href="https://play.google.com/store/search?q=hallow&c=apps&hl=es_US">
+                                    <a href="https://hallow.com/es/" target="_blank">
                                     <div class="card-content">
                                         <h3>Hallow</h3>
                                         <h4>Meditación Católica</h4>
-                                        <img src="imagen/app3.png" alt="App 3">
+                                        <div class="image-container">
+                                            <img src="imagen/index/app3.png" alt="App 3">
+                                            <div class="image-overlay"></div>
+                                        </div>
                                         <p>"Rezar el rosario, oraciones para dormir e historias bíblicas católicas."</p>
                                     </div>
                                     </a>
@@ -436,27 +474,6 @@
 
                 </div>
 
-                <!-- <div class="con2">
-                    <div class="element">
-                        <div class="app-name">Horarios de Misa</div>
-                        <img src="imagen/app1.png" alt="App 1">
-                        <div class="app-description">"Encuentra las iglesias católicas cerca de ti y sus horarios de
-                            misa"</div>
-                    </div>
-
-                    <div class="element">
-                        <div class="app-name">La Biblia</div>
-                        <img src="imagen/app2.png" alt="App 2">
-                        <div class="app-description">Frase breve sobre la App 2</div>
-                    </div>
-
-                    <div class="element">
-                        <div class="app-name">Hallow: Meditación Católica</div>
-                        <img src="imagen/app3.png" alt="App 2">
-                        <div class="app-description">"Rezar el rosario, oraciones para dormir e historias bíblicas
-                            católicas"</div>
-                    </div>
-                </div> -->
             </div>
 
         </div>
@@ -464,7 +481,7 @@
 
     <!-- Icono superpuesto -->
     <div class="overlay-icon" id="toggleApps">
-        <i class="bi bi-circle-fill text-primary" style="font-size: 3rem;"></i>
+        <img src="imagen/smalogo.jpg" alt="Aplicación iconos creados por Those Icons - Flaticon">
     </div>
 
     <!-- Scripts -->
@@ -476,6 +493,10 @@
             document.body.classList.toggle('overflow-hidden');
         });
     </script>
+
+    <!-- BOTON SCROLL -->
+
+    <i id="scrollToTop" class="bi bi-chevron-up" onclick="scrollToTop()"></i>
 
     <!-- PIE DE PAGINA -->
 
@@ -500,6 +521,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="menu.js"></script>
+    <script src="index.js"></script>
     <script src="general.js"></script>
 
 </body>
