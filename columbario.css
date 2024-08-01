@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .content-wrapper {
     margin: 50px;
     background-color: #ffffff;
@@ -32,12 +33,18 @@ body {
         position: relative;
         color: white;
         text-align: center;
-        font-size: 2.5rem !important; 
+        font-size: 2rem !important; 
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .btnmrg {
         margin-bottom: 30px;
+    }
+
+    .hero {
+        background-position: center center; 
+        background-size: cover; 
+        height: 60vh !important; 
     }
 
 }
@@ -190,3 +197,4 @@ body {
 .accordion-body {
     padding: 20px;
 }
+
