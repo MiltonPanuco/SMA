@@ -1,0 +1,125 @@
+.drawer {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+}
+
+@media (min-width: 768px) {
+    .drawer {
+        width: 350px;
+    }
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu-icon span:nth-child(2),
+.menu-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.menu-icon span:nth-child(4) {
+    top: 20px;
+}
+
+.menu-icon.open span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.menu-icon.open span:nth-child(4) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.submenu.active {
+    max-height: 500px;
+}
+
+.menu-level-0 {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.menu-level-1 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+}
+
+.menu-level-2 {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-left: 2rem;
+}
+
+.menu-item::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.menu-level-0::before {
+    background-color: #3B82F6;
+    border-radius: 50%;
+}
+
+.menu-level-1::before {
+    border: 2px solid #3B82F6;
+    border-radius: 50%;
+}
+
+.menu-level-2::before {
+    border: 1px solid #3B82F6;
+    width: 4px;
+    height: 4px;
+}

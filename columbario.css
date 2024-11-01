@@ -1,93 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-}
-
-.content-wrapper {
-    margin: 50px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-@media screen and (max-width: 999px) {
-
-    .section {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    .hero-logo {
-        position: absolute;
-        bottom: 20px; 
-        left: 50%;   
-        transform: translateX(-50%);
-        width: 200px; 
-        z-index: 2;
-    }
-
-    .hero h1 {
-        position: relative;
-        color: white;
-        text-align: center;
-        font-size: 2rem !important; 
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .btnmrg {
-        margin-bottom: 30px;
-    }
-
-    .hero {
-        background-position: center center; 
-        background-size: cover; 
-        height: 60vh !important; 
-    }
-
-}
-
-.hero {
-    position: relative;
-    background-image: url("imagen/columbario/columbario0.jpg"); 
+.hero-background {
+    background-image: url('imagen/columbario/fondo1.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    overflow: hidden;
+    background-attachment: fixed;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 1rem;
-    z-index: 1;
-}
-
-.hero h1 {
-    position: relative;
-    color: white;
-    z-index: 2;
-    text-align: center;
-    font-size: 4rem; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-logo {
-    position: absolute;
-    bottom: 20px;  
-    right: 20px;   
-    width: 150px;  
-    z-index: 2;
+.hero-background2 {
+    background-image: url('imagen/columbario/fondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .service-icon {
@@ -96,105 +18,71 @@ body {
     color: black;
 }
 
-.service-title {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    color: black;
+.bg-gray-100:hover,
+.bg-gray-100:hover .service-icon {
+    color: #60a5fa;
+    transition: color 0.3s ease;
 }
 
-.service-description {
-    font-size: 1.1em;
-    color: black;
-}
-
-.service-description {
-    font-size: 1.1em;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 20px; 
-    color: black;
-}
-
-.section h2 {
-    color: black;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.section p {
-    text-align: center;
-}
-
-.video-container {
+.slider-container {
     position: relative;
-    padding-bottom: 56.25%; /* Proporción 16:9 */
-    padding-top: 25px;
-    height: 0;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: black;
 }
 
-.video-container video {
+.slider-button {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
     border: none;
-    border-radius: 15px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    transition: background-color 0.3s;
+
+.slider-button-left {
+    left: 10px;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+.slider-button-right {
+    right: 10px;
 }
 
-.flexCenter {
-    display: flex;
-    align-items: center;
-}
 
-.extra-margin {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-
-.accordion-button {
-    background-color: #fff;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 15px 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.contribution-option {
     transition: all 0.3s ease;
 }
-.accordion-button:hover {
-    background-color: #e9ecef;
-    color: #333;
-}
-.accordion-button:focus {
-    box-shadow: none;
+
+.contribution-option:not(.active):hover {
+    background-color: #e5e7eb;
 }
 
-.accordion-header {
-    border-radius: 5px;
+.contribution-option.active {
+    background-color: #3b82f6;
+    color: white;
 }
 
-.accordion-collapse {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+#whatsappButton {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    font-size: 1.1rem;
 }
 
-.accordion-body {
-    padding: 20px;
+#whatsappButton.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
+#whatsappButton:hover {
+    background-color: #128C7E;
+}

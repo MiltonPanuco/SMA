@@ -1,934 +1,590 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Templos</title>
+    <link rel="icon" href="imagen/logo.jpg" type="image/x-icon">
 
-    <link rel="icon" href="imagen/smalogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="templo.css">
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="complement.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
-    <link rel="stylesheet" type="text/css" href="templos.css">
-    <link rel="stylesheet" type="text/css" href="complement.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="bg-gray-100">
 
-    <div class="header">
+    <header>
+        <!-- Barra superior -->
+        <div class="fixed top-0 left-0 right-0 h-16 bg-black bg-opacity-90 z-40"></div>
 
-        <!-- PANTALLA DE CARGA -->
-
-        <div class="loader-wrapper">
-            <div class="logopc-wrapper">
-                <img class="logopc" src="imagen/smalogo.jpg" alt="Logo SMA">
-                <div class="loader"></div>
-            </div>
-            <p>Cargando bendiciones...</p>
+        <div class="fixed top-2 right-2 z-50">
+            <a href="index.html">
+                <img src="imagen/logo-blancoynegro.png" alt="Logo San Miguel Arcángel"
+                    class="h-12 w-auto object-contain">
+            </a>
         </div>
 
-        <div id="avisos-slider-placeholder"></div>
-        <div id="menu-placeholder"></div>
+        <!-- Cargando -->
+        <div id="loader-wrapper">
+            <div id="loader" aria-label="Cargando"></div>
+            <p id="loading-text" aria-live="polite"></p>
+        </div>
 
+        <!-- Menú hamburguesa -->
+        <div id="menu-button" class="fixed top-5 left-4 z-50 cursor-pointer">
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Drawer del menú -->
+        <div id="menu-drawer" class="fixed bg-black bg-opacity-90 text-white z-40 drawer">
+            <nav class="flex flex-col h-full px-8 py-8 pt-20">
+                <ul id="menu-list" class="text-white w-full">
+                    <!-- Cargado con JS -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay min-h-screen py-12 px-4 sm:px-6 lg:px-8 font">
+        <div class="max-w-6xl mx-auto ">
+
+            <div class="text-center mb-12 mt-20">
+                <i class="fas fa-church fa-3x mb-4 text-white"></i>
+                <h1 class="text-4xl font-bold text-white mb-2">Templos</h1>
+                <p class="text-xl text-white">¿Dónde nos ubicamos?</p>
+            </div>
+
+            <main class="container mx-auto px-4 py-8">
+                <div class="swiper-container main-temple-swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Parroquia San Miguel Arcángel -->
+                        <div class="swiper-slide" id="sma">
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden">
+
+                                <div class="relative">
+                                    <div class="swiper-container nested-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/sma/1.jpg" alt="Parroquia San Miguel Arcángel 1"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/sma/2.jpg" alt="Parroquia San Miguel Arcángel 2"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/sma/3.jpg" alt="Parroquia San Miguel Arcángel 3"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <div class="lg:flex">
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-gray-800">Parróquia
+                                            San Miguel Arcángel</h2>
+                                        <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">La Parroquia San
+                                            Miguel Arcángel es una comunidad cristiana católica, eregida recientemente
+                                            el 26 de agosto 2023. Es un centro de reunión para la comunidad local,
+                                            ofreciendo servicios religiosos, sacramentos y actividades pastorales.
+                                            Además de su función espiritual, la parroquia tiene un papel activo en la
+                                            comunidad, participando en obras sociales, eventos culturales y programas
+                                            educativos.</p>
+                                        <div class="flex justify-between items-center">
+                                            <button
+                                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm md:text-base"
+                                                onclick="mostrarInformacion('parroquiaSMA')">
+                                                Horarios
+                                            </button>
+                                            <div class="flex items-center">
+                                                <a href="https://maps.app.goo.gl/KXnMSBEcaNrGcPtZ7" target="_blank"
+                                                    class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out">
+                                                    <span class="mr-2 text-sm text-gray-600">Ver ubicación</span> <i
+                                                        class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <div id="map-parroquia" class="w-full h-64 lg:h-full rounded-lg shadow"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Templo 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden">
+
+                                <div class="relative">
+                                    <div class="swiper-container nested-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/icdm/1.jpg" alt="Templo 1 Imagen 1"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/icdm/2.jpg" alt="Templo 1 Imagen 2"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/icdm/3.jpg" alt="Templo 1 Imagen 3"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <div class="lg:flex">
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-gray-800">Capilla
+                                            Inmaculada Concepción de Maria</h2>
+                                        <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">La capilla es una
+                                            construcción temporal, ya que tenemos un proyecto de construccón que busca
+                                            favorecer una mejor atención pastoral y sacramental. Las áreas verdes
+                                            favorecen un encuentro con Cristo y además se cuenta con un <a
+                                                href="columbario.html"
+                                                class="hover:text-blue-400 transition duration-300">Columbario</a> para
+                                            el resguardo de las cenizas de los difuntos. En esta capilla también se
+                                            tiene la devoción a la Virgen del Favor, patrona de los motociclistas y a
+                                            San José, esposo de la Virgen María.</p>
+                                        <div class="flex justify-between items-center">
+                                            <button
+                                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm md:text-base"
+                                                onclick="mostrarInformacion('temploICDM')">
+                                                Horarios
+                                            </button>
+                                            <div class="flex items-center">
+                                                <span class="mr-2 text-sm text-gray-600">Ver ubicación</span>
+                                                <a href="#"
+                                                    class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out"
+                                                    onclick="abrirMapa('temploICDM')">
+                                                    <i class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <div id="map1" class="w-full h-64 lg:h-full rounded-lg shadow"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Templo 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden">
+
+                                <div class="relative">
+                                    <div class="swiper-container nested-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/nsl/1.jpg" alt="Templo 2 Imagen 1"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/nsl/2.jpg" alt="Templo 2 Imagen 2"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/nsl/3.jpg" alt="Templo 2 Imagen 3"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <div class="lg:flex">
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-gray-800">Capilla
+                                            Nuestra Señora de la Luz</h2>
+                                        <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">Este templo se
+                                            construyó sobre un cerrito que permite una hermosa vista, que aunque es
+                                            pequeña se ha
+                                            construido con gran esfuerzo para tener las celebraciónes litúrgicas. Es una
+                                            comunidad aún en construcción pero con fieles llenos de fe que trabajan en
+                                            unidad.</p>
+                                        <div class="flex justify-between items-center">
+                                            <button
+                                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm md:text-base"
+                                                onclick="mostrarInformacion('temploNSL')">
+                                                Horarios
+                                            </button>
+                                            <div class="flex items-center">
+                                                <a href="https://maps.app.goo.gl/Ayw8gzssnnz9YBbh8" target="_blank"
+                                                    class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out">
+                                                    <span class="mr-2 text-sm text-gray-600">Ver ubicación</span> <i
+                                                        class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <div id="map2" class="w-full h-64 lg:h-full rounded-lg shadow"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Templo 3 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden">
+
+                                <div class="relative">
+                                    <div class="swiper-container nested-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/sjd/1.jpg" alt="Templo 3 Imagen 1"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/sjd/2.jpg" alt="Templo 3 Imagen 2"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/sjd/3.jpg" alt="Templo 3 Imagen 3"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/sjd/4.jpg" alt="Templo 3 Imagen 4"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <div class="lg:flex">
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-gray-800">Capilla
+                                            San Juan
+                                            Diego
+                                        </h2>
+                                        <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">Es una comunidad
+                                            localizada en la periferia de la ciudad de Tepic, la cual cuenta con un
+                                            templo amplio que favorece la celebraciones litúrgicas, sigue en
+                                            construcción
+                                            gracias a la participación de las mismas familias y al trabajo en equipo.
+                                        </p>
+                                        <div class="flex justify-between items-center">
+                                            <button
+                                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm md:text-base"
+                                                onclick="mostrarInformacion('temploSJD')">
+                                                Horarios
+                                            </button>
+                                            <div class="flex items-center">
+                                                <a href="https://maps.app.goo.gl/rjfHgM97ezFw7rQZ9" target="_blank"
+                                                    class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out">
+                                                    <span class="mr-2 text-sm text-gray-600">Ver ubicación</span> <i
+                                                        class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <div id="map3" class="w-full h-64 lg:h-full rounded-lg shadow"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Templo 4 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden">
+
+                                <div class="relative">
+                                    <div class="swiper-container nested-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/nsdg/1.jpg" alt="Templo 4 Imagen 1"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/nsdg/2.jpg" alt="Templo 4 Imagen 2"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/nsdg/3.jpg" alt="Templo 4 Imagen 3"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <div class="lg:flex">
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-gray-800">Capilla
+                                            Nuestra
+                                            Señora
+                                            de Guadalupe</h2>
+                                        <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">Es un templo dedicado
+                                            a nuestra Madre Santísima de Guadalupe, con un bello diseño y acogedor,
+                                            donde
+                                            se celebran continuamente Eucaristías y sacramentos. En una ubicación de
+                                            fácil
+                                            acceso, con una comunidad de fieles pequeña pero con mucho amor a Dios.</p>
+                                        <div class="flex justify-between items-center">
+                                            <button
+                                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm md:text-base"
+                                                onclick="mostrarInformacion('temploNSDG')">
+                                                Horarios
+                                            </button>
+                                            <div class="flex items-center">
+                                                <a href="https://maps.app.goo.gl/8vxZ4ihQtQpCTw8k9" target="_blank"
+                                                    class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out">
+                                                    <span class="mr-2 text-sm text-gray-600">Ver ubicación</span> <i
+                                                        class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <div id="map4" class="w-full h-64 lg:h-full rounded-lg shadow"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Templo 5 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden">
+
+                                <div class="relative">
+                                    <div class="swiper-container nested-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/rdm/1.jpg" alt="Templo 5 Imagen 1"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/rdm/2.jpg" alt="Templo 5 Imagen 2"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/rdm/3.jpg" alt="Templo 5 Imagen 3"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <div class="lg:flex">
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-gray-800">Capilla
+                                            Nuestra
+                                            Señora
+                                            de Guadalupe Reina de México</h2>
+                                        <p class="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">Este templo, aunque
+                                            modesto en tamaño, irradia una atmósfera acogedora que invita a la comunidad
+                                            a congregarse en su seno. Sus acabados están meticulosamente diseñados para
+                                            brindar un ambiente cálido y acogedor, creando un espacio propicio para la
+                                            reflexión y la comunión espiritual.</p>
+                                        <div class="flex justify-between items-center">
+                                            <button
+                                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm md:text-base"
+                                                onclick="mostrarInformacion('temploRDM')">
+                                                Horarios
+                                            </button>
+                                            <div class="flex items-center">
+                                                <a href="https://maps.app.goo.gl/ZPexuy6i1hQinsUY8" target="_blank"
+                                                    class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out">
+                                                    <span class="mr-2 text-sm text-gray-600">Ver ubicación</span> <i
+                                                        class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <div id="map5" class="w-full h-64 lg:h-full rounded-lg shadow"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Templo 6 -->
+                        <div class="swiper-slide">
+                            <div class="bg-white bg-opacity-90 rounded-lg shadow-lg overflow-hidden">
+
+                                <div class="relative">
+                                    <div class="swiper-container nested-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/mdb/1.jpg" alt="Templo 6 Imagen 1"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/mdb/2.jpg" alt="Templo 6 Imagen 2"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="imagen/templo/mdb/3.jpg" alt="Templo 6 Imagen 3"
+                                                    class="w-full h-48 md:h-64 lg:h-80 object-cover">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <div class="lg:flex">
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <h2 class="text-2xl md:text-3xl font-bold mb-2 md:mb-4 text-gray-800">Misa de
+                                            barrio: Sagrada Familia de Nazareth</h2>
+                                        <p class="text-gray-800 mb-4 md:mb-6 text-sm md:text-base">El territorio
+                                            parroquial es grande, por lo que las necesidades de acercarnos a los fieles
+                                            también lo es, debido a esto fue necesario empezar a celebrar en diferentes
+                                            lugares
+                                            para congregar a los fieles y poder ofrecer la vivencia de los sacramentos y
+                                            de
+                                            la formación de la fe. Con gran entusiasmo las familias ayudan a hacer
+                                            posible
+                                            las misas bajo la sombra de unos árboles.</p>
+                                        <div class="flex justify-between items-center">
+                                            <button
+                                                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-sm md:text-base"
+                                                onclick="mostrarInformacion('temploMDB')">
+                                                Horarios
+                                            </button>
+                                            <div class="flex items-center">
+                                                <a href="https://maps.app.goo.gl/wL7tau6iLdyuqarEA" target="_blank"
+                                                    class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out">
+                                                    <span class="mr-2 text-sm text-gray-600">Ver ubicación</span> <i
+                                                        class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-1/2 p-4 md:p-6">
+                                        <div id="map6" class="w-full h-64 lg:h-full rounded-lg shadow"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="TempleBtns" class="fixed bottom-4 left-0 right-0 flex justify-center space-x-4 z-10">
+                    <button id="prevTempleBtn"
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        <i class="fas fa-church mr-2"></i>Anterior
+                    </button>
+                    <button id="nextTempleBtn"
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                        Siguiente<i class="fas fa-church ml-2"></i>
+                    </button>
+                </div>
+
+            </main>
+
+            <div class="container mx-auto px-4 py-8 mt-8 bg-white bg-opacity-90 rounded-lg shadow-lg mt-20 mb-20">
+                <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Sacerdotes Encargados</h2>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
+                        <img src="imagen/templo/pbro/pbro.rafael.png" alt="Padre Rafael" class="w-26 h-29 mr-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-gray-700">Presbítero Rafael Alfonso Flores Mejía
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, praesentium nam quam
+                                voluptatem rem error iusto unde suscipit deserunt doloribus est sunt aspernatur eius
+                                facere explicabo corporis accusamus expedita laboriosam.</p> &nbsp;
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, praesentium nam quam
+                                voluptatem rem error iusto unde suscipit deserunt doloribus est sunt aspernatur eius
+                                facere explicabo corporis accusamus expedita laboriosam.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center text-gray-700">
+                        <div class="text-right ml-auto">
+                            <h3 class="text-xl font-semibold mb-2">Presbítero Alfonso Herrera Maldonado</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga perspiciatis praesentium
+                                recusandae, laborum consequuntur beatae fugiat dolorum placeat atque ex expedita nisi
+                                porro, harum numquam facere? Sed quae aliquam at!</p>
+                        </div>
+                        <img src="https://via.placeholder.com/150x150.png?text=Padre+Alfonso" alt="Padre Alfonso"
+                            class="w-26 h-29 ml-6">
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="infoModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+                <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                    <div class="mt-3 text-center">
+                        <h3 class="text-xl font-bold leading-6 text-gray-900" id="modalTitle"></h3>
+                        <div class="mt-2 px-7 py-3">
+                            <p class="text-sm text-black" id="modalContent"></p>
+                        </div>
+                        <div class="items-center px-4 py-3">
+                            <button id="closeModal"
+                                class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <!-- CUERPO DE LA PAGINA -->
-
-    <div class="custom-container mt-5">
-        <h1 class="text-center mb-4">¿Dónde nos ubicamos?</h1>
-
-        <br>
-
-        <!-- TEMPLO 1 -->
-        <div class="row mb-4 hidden">
-            <div class="col-md-6 flexCenter">
-
-                <!-- Imagenes del carrusel -->
-                <div id="carouseltemplo1" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
-                    data-bs-interval="4000">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src="imagen/templos/sma1.jpg" class="d-block w-100" alt="Templo 1 - Imagen 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/sma2.jpg" class="d-block w-100" alt="Templo 1 - Imagen 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/sma3.jpg" class="d-block w-100" alt="Templo 1 - Imagen 3">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6">
-
-                <!-- Información del Templo 1 -->
-                <div class="card" id="SanMiguelArcangel">
-                    <div class="card-body">
-
-                        <h3 class="card-title">Parróquia San Miguel Arcángel</h3>
-
-                        <p class="card-text extra-margin">
-                            La Parroquia San Miguel Arcángel es una comunidad cristiana católica, eregida recientemente
-                            el 26 de agosto 2023. Es un centro de reunión para la comunidad local, ofreciendo servicios
-                            religiosos, sacramentos y actividades pastorales. Además de su función espiritual, la
-                            parroquia tiene un papel activo en la comunidad, participando en obras sociales, eventos
-                            culturales y programas educativos.
-                        </p>
-
-                        <hr>
-
-                        <p class="card-text"><strong>Fiesta Patronal:</strong> 29 de Septiembre</p>
-                        <p class="card-text"><strong>Dirección:</strong> <a
-                                href="https://maps.app.goo.gl/DosuBbt8MDcTP4Rj9"> C. Níquel #46, Col. Morelos </a> </p>
-
-                        <div id="mapatemplo1" class="map-container">
-                            <button id="button1" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#requisitosModal1">Horarios</button>
-                        </div>
-
-                        <div class="modal fade" id="requisitosModal1" tabindex="-1"
-                            aria-labelledby="requisitosModalLabel1" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-center w-100" id="requisitosModalLabel1">Itinerario
-                                        </h5>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <ul type="square">
-
-                                            <li><strong>Eucaristías.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Lunes a Sábado:</u> 07:00 PM.</li>
-                                                    <li><u>Jueves y Sábado:</u> 07:00 AM.</li>
-                                                    <li><u>Domingo:</u> 7:00 AM, 9:00 AM, 7:00 PM, 8:00 PM.</li>
-                                                </ul>
-                                            </li>
-                                            <br>
-                                            <li><strong>Adoración al Santísimo Sacramento.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Jueves:</u> 08:00 AM - 07:00 PM.</li>
-                                                    <li><u>Hora Santa:</u> 08:00 PM.</li>
-                                                </ul>
-                                            </li>
-                                            <br>
-                                            <li><strong>Adoración Nocturna Mexicana.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Hombres:</u> 1er Sábado de mes.</li>
-                                                    <li><u>Mujeres:</u> 2do Sábado de mes.</li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <script>
-                            function initMaptemplo1() {
-                                const mapatemplo1 = L.map('mapatemplo1', {
-                                    scrollWheelZoom: false,
-                                    doubleClickZoom: false,
-                                    dragging: false,
-                                    zoomControl: false
-                                }).setView([21.451267586126622, -104.9055825899271], 18);
-
-                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                    maxZoom: 17,
-                                }).addTo(mapatemplo1);
-
-                                L.marker([21.451267586126622, -104.9055825899271]).addTo(mapatemplo1)
-                                    .bindPopup('Parróquia San Miguel Arcángel')
-                                    .openPopup();
-                            }
-
-
-                        </script>
-
-                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-                        <script>
-                            initMaptemplo1();
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-        <br>
-
-        <!-- TEMPLO 2 -->
-        <div class="row mb-4 hidden">
-            <div class="col-md-6 order-md-2 flexCenter">
-
-                <!-- Imagenes del carrusel -->
-                <div id="carouseltemplo2" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
-                    data-bs-interval="4000">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src="imagen/templos/icdm1.jpg" class="d-block w-100" alt="Templo 2 - Imagen 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/icdm2.jpg" class="d-block w-100" alt="Templo 2 - Imagen 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/icdm3.jpg" class="d-block w-100" alt="Templo 2 - Imagen 3">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 order-md-1">
-
-                <!-- Información del Templo 2 -->
-                <div class="card" id="ICDM">
-                    <div class="card-body">
-
-                        <h3 class="card-title">Capilla Inmaculada <br>Concepción de María</h3>
-                        <p class="card-text extra-margin">
-                            La capilla es una construcción temporal, ya que tenemos un proyecto de construccón que busca
-                            favorecer una mejor atención pastoral y sacramental. Las áreas verdes favorecen un encuentro
-                            con Cristo y además se cuenta con un <a href="columbario.html">Columbario</a>, para el
-                            resguardo de las cenizas de los difuntos. En esta capilla también se tiene la devoción a la
-                            Virgen del Favor, patrona de los motociclistas y a San José, esposo de la Virgen María.
-                        </p>
-
-                        <hr>
-
-                        <p class="card-text"><strong>Fiesta Patronal:</strong> 08 de Diciembre</p>
-                        <p class="card-text"><strong>Dirección:</strong> <a
-                                href="https://maps.app.goo.gl/DAEYoXxUsdbTHSDX6"> C. Jilguero, Col. Nuevo Progreso </a>
-                        </p>
-
-                        <div id="mapatemplo2" class="map-container">
-                            <button id="button2" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#requisitosModal2">Horarios</button>
-                        </div>
-
-                        <div class="modal fade" id="requisitosModal2" tabindex="-1"
-                            aria-labelledby="requisitosModalLabel2" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-center w-100" id="requisitosModalLabel2">Itinerario
-                                        </h5>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <ul type="square">
-
-                                            <li><strong>Eucaristías.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Lunes, Martes, Miercoles y Viernes:</u> 07:00 AM.</li>
-                                                    <li><u>Jueves:</u> 05:00 PM.</li>
-                                                    <li><u>Sábado:</u> 06:00 PM.</li>
-                                                    <li><u>Domingo:</u> 08:00 AM y 06:30 PM.</li>
-                                                </ul>
-                                            </li>
-                                            <br>
-                                            <li><strong>Adoración al Santísimo Sacramento.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Jueves:</u> 05:00 PM.</li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <script>
-                            function initMaptemplo2() {
-                                const mapatemplo2 = L.map('mapatemplo2', {
-                                    scrollWheelZoom: false,
-                                    doubleClickZoom: false,
-                                    dragging: false,
-                                    zoomControl: false
-                                }).setView([21.461363999333575, -104.89835249245886], 18);
-
-                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                    maxZoom: 17,
-                                }).addTo(mapatemplo2);
-
-                                L.marker([21.461363999333575, -104.89835249245886]).addTo(mapatemplo2)
-                                    .bindPopup('Capilla Inmaculada Concepción de María')
-                                    .openPopup();
-                            }
-                        </script>
-
-                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-                        <script>
-                            initMaptemplo2();
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-        <br>
-
-        <!-- TEMPLO 3 -->
-        <div class="row mb-4 hidden">
-            <div class="col-md-6 flexCenter">
-
-                <!-- Imagenes del carrusel -->
-                <div id="carouseltemplo3" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
-                    data-bs-interval="4000">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src="imagen/templos/nsl1.jpg" class="d-block w-100" alt="Templo 3 - Imagen 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/nsl2.jpg" class="d-block w-100" alt="Templo 3 - Imagen 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/nsl3.jpg" class="d-block w-100" alt="Templo 3 - Imagen 3">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6">
-
-                <!-- Información del Templo 3 -->
-                <div class="card">
-
-                    <div class="card-body">
-
-                        <h3 class="card-title">Capilla Nuestra Señora de la Luz</h3>
-                        <p class="card-text extra-margin">
-                            Este templo se construyó sobre un cerrito que permite una hermosa vista, que aunque es
-                            pequeña se ha construido con gran esfuerzo para tener las celebraciónes litúrgicas. Es una
-                            comunidad aún en construcción pero con fieles llenos de fe que trabajan en unidad.
-                        </p>
-
-                        <hr>
-
-                        <p class="card-text"><strong>Fiesta Patronal:</strong> Último domingo de Mayo</p>
-                        <p class="card-text"><strong>Dirección:</strong> <a
-                                href="https://maps.app.goo.gl/gkhgAZsfBwK4nR8E8"> C. Urano #10, Col. Lomas del Nayar
-                            </a> </p>
-
-                        <div id="mapatemplo3" class="map-container">
-                            <button id="button3" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#requisitosModal3">Horarios</button>
-                        </div>
-
-                        <div class="modal fade" id="requisitosModal3" tabindex="-1"
-                            aria-labelledby="requisitosModalLabel3" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-center w-100" id="requisitosModalLabel3">Itinerario
-                                        </h5>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <ul type="square">
-
-                                            <li><strong>Eucaristías.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Domingo:</u> 09:30 AM.</li>
-                                                    <li><u>Viernes -</u> Celebracion de la Palabra: 5:00 PM.</li>
-                                                    <li><u> -</u> Al concluir la celebración inicia nuestra Hora Santa.</li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <script>
-                            function initMaptemplo3() {
-                                const mapatemplo3 = L.map('mapatemplo3', {
-                                    scrollWheelZoom: false,
-                                    doubleClickZoom: false,
-                                    dragging: false,
-                                    zoomControl: false
-                                }).setView([21.463371294019506, -104.89198972410149], 18);
-
-                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                    maxZoom: 17,
-                                }).addTo(mapatemplo3);
-
-                                L.marker([21.463371294019506, -104.89198972410149]).addTo(mapatemplo3)
-                                    .bindPopup('Capilla Nuestra Señora de la Luz')
-                                    .openPopup();
-                            }
-                        </script>
-
-                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-                        <script>
-                            initMaptemplo3();
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-        <br>
-
-        <!-- TEMPLO 4 -->
-        <div class="row mb-4 hidden">
-            <div class="col-md-6 order-md-2 flexCenter">
-
-                <!-- Imagenes del carrusel -->
-                <div id="carouseltemplo4" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
-                    data-bs-interval="4000">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src="imagen/templos/sjd1.jpg" class="d-block w-100" alt="Templo 4 - Imagen 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/sjd2.jpg" class="d-block w-100" alt="Templo 4 - Imagen 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/sjd3.jpg" class="d-block w-100" alt="Templo 4 - Imagen 3">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/sjd4.jpg" class="d-block w-100" alt="Templo 4 - Imagen 4">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 order-md-1">
-
-                <!-- Información del Templo 4 -->
-                <div class="card">
-                    <div class="card-body">
-
-                        <h3 class="card-title">Capilla San Juan Diego</h3>
-
-                        <p class="card-text extra-margin">
-                            Es una comunidad localizada en la periferia de la ciudad de Tepic, la cual cuenta con un
-                            templo amplio que favorece la celebraciones litúrgicas, sigue en construcción gracias a la
-                            participación de las mismas familias y al trabajo en equipo.
-                        </p>
-
-                        <hr>
-
-                        <p class="card-text"><strong>Fiesta Patronal:</strong> 09 de Diciembre</p>
-                        <p class="card-text"><strong>Dirección:</strong> <a
-                                href="https://maps.app.goo.gl/G6uxuexXoJeNRCPa8"> C. Shangháy #100, Col. Insurgentes
-                            </a> </p>
-
-                        <div id="mapatemplo4" class="map-container">
-                            <button id="button4" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#requisitosModal4">Horarios</button>
-                        </div>
-
-                        <div class="modal fade" id="requisitosModal4" tabindex="-1"
-                            aria-labelledby="requisitosModalLabel4" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-center w-100" id="requisitosModalLabel4">Itinerario
-                                        </h5>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <ul type="square">
-
-                                            <li><strong>Eucaristías.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Domingo:</u> 11:00 AM.</li>
-                                                    <li><u>Jueves -</u> Celebracion de la Palabra: 5:00 PM.</li>
-                                                    <li><u> -</u> Al concluir la celebración inicia nuestra Hora Santa.</li>
-                                                </ul>
-                                            </li>
-
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <script>
-                            function initMaptemplo4() {
-                                const mapatemplo4 = L.map('mapatemplo4', {
-                                    scrollWheelZoom: false,
-                                    doubleClickZoom: false,
-                                    dragging: false,
-                                    zoomControl: false
-                                }).setView([21.47238178214613, -104.89364150747643], 18);
-
-                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                    maxZoom: 17,
-                                }).addTo(mapatemplo4);
-
-                                L.marker([21.47238178214613, -104.89364150747643]).addTo(mapatemplo4)
-                                    .bindPopup('Capilla San Juan Diego')
-                                    .openPopup();
-                            }
-                        </script>
-
-                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-                        <script>
-                            initMaptemplo4();
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-        <br>
-
-        <!-- TEMPLO 5 -->
-        <div class="row mb-4 hidden">
-            <div class="col-md-6 flexCenter">
-
-                <!-- Imagenes del carrusel -->
-                <div id="carouseltemplo3" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
-                    data-bs-interval="4000">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src="imagen/templos/nsdg1.jpg" class="d-block w-100" alt="Templo 5 - Imagen 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/nsdg2.jpg" class="d-block w-100" alt="Templo 5 - Imagen 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/nsdg3.jpg" class="d-block w-100" alt="Templo 5 - Imagen 3">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6">
-
-                <!-- Información del Templo 5 -->
-                <div class="card">
-
-                    <div class="card-body">
-
-                        <h3 class="card-title">Capilla Nuestra Señora de Guadalupe</h3>
-
-                        <p class="card-text extra-margin">
-                            Es un templo dedicado a nuestra Madre Santísima de Guadalupe, con un bello diseño y
-                            acogedor, donde se celebran continuamente Eucaristías y sacramentos. En una ubicación de
-                            fácil acceso, con una comunidad de fieles pequeña pero con mucho amor a Dios.
-                        </p>
-
-                        <hr>
-
-                        <p class="card-text"><strong>Fiesta Patronal:</strong> 12 de Diciembre </p>
-                        <p class="card-text"><strong>Dirección:</strong> <a
-                                href="https://maps.app.goo.gl/QVheoBzkvqvEd3Py8"> C. Álamo y C. Granados, Col.Huertas de
-                                Matatipac </a> </p>
-
-                        <div id="mapatemplo5" class="map-container">
-                            <button id="button5" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#requisitosModal5">Horarios</button>
-                        </div>
-
-                        <div class="modal fade" id="requisitosModal5" tabindex="-1"
-                            aria-labelledby="requisitosModalLabel5" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-center w-100" id="requisitosModalLabel5">Itinerario
-                                        </h5>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <ul type="square">
-
-                                            <li><strong>Eucaristías.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Domingo:</u> 12:30 PM.</li>
-                                                </ul>
-                                            </li>
-
-                                            <li><strong>Dívina Providencia.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Día primero de cada mes:</u> 11:00 AM.</li>
-                                                </ul>
-                                            </li>
-
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <script>
-                            function initMaptemplo5() {
-                                const mapatemplo5 = L.map('mapatemplo5', {
-                                    scrollWheelZoom: false,
-                                    doubleClickZoom: false,
-                                    dragging: false,
-                                    zoomControl: false
-                                }).setView([21.455806198743847, -104.89713821845478], 18);
-
-                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                    maxZoom: 17,
-                                }).addTo(mapatemplo5);
-
-                                L.marker([21.455806198743847, -104.89713821845478]).addTo(mapatemplo5)
-                                    .bindPopup('Capilla Nuestra Señora de Guadalupe')
-                                    .openPopup();
-                            }
-                        </script>
-
-                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-                        <script>
-                            initMaptemplo5();
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-        <br>
-
-        <!-- TEMPLO 6 -->
-        <div class="row mb-4 hidden">
-            <div class="col-md-6 order-md-2 flexCenter">
-
-                <!-- Imagenes del carrusel -->
-                <div id="carouseltemplo6" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
-                    data-bs-interval="4000">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src="imagen/templos/rdm1.jpg" class="d-block w-100" alt="Templo 6 - Imagen 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/rdm2.jpg" class="d-block w-100" alt="Templo 6 - Imagen 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/rdm3.jpg" class="d-block w-100" alt="Templo 6 - Imagen 3">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 order-md-1">
-
-                <!-- Información del Templo 6 -->
-                <div class="card">
-                    <div class="card-body">
-
-                        <h3 class="card-title">Capilla Nuestra Señora de Guadalupe Reina de México</h3>
-
-                        <p class="card-text extra-margin">
-                            Este templo, aunque modesto en tamaño, irradia una atmósfera acogedora que invita a la
-                            comunidad a congregarse en su seno. Sus acabados están meticulosamente diseñados para
-                            brindar un ambiente cálido y acogedor, creando un espacio propicio para la reflexión y la
-                            comunión espiritual.
-                        </p>
-
-                        <hr>
-
-                        <p class="card-text"><strong>Fiesta Patronal:</strong> 12 de Octubre </p>
-                        <p class="card-text"><strong>Dirección:</strong> <a
-                                href="https://maps.app.goo.gl/AaXDdzo6crnGH8vd6"> C, Sánchez Vázquez #14, Col. Sánchez
-                                Vázquez </a> </p>
-
-                        <div id="mapatemplo6" class="map-container">
-                            <button id="button6" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#requisitosModal6">Horarios</button>
-                        </div>
-
-                        <div class="modal fade" id="requisitosModal6" tabindex="-1"
-                            aria-labelledby="requisitosModalLabel6" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-center w-100" id="requisitosModalLabel6">Itinerario
-                                        </h5>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <ul type="square">
-
-                                            <li><strong>Eucaristías.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Domingo:</u> 05:00 PM.</li>
-
-                                                </ul>
-                                            </li>
-
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <script>
-                            function initMaptemplo6() {
-                                const mapatemplo6 = L.map('mapatemplo6', {
-                                    scrollWheelZoom: false,
-                                    doubleClickZoom: false,
-                                    dragging: false,
-                                    zoomControl: false
-                                }).setView([21.464947734694423, -104.90780586539476], 18);
-
-                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                    maxZoom: 17,
-                                }).addTo(mapatemplo6);
-
-                                L.marker([21.464947734694423, -104.90780586539476]).addTo(mapatemplo6)
-                                    .bindPopup('Capilla Nuestra Señora de Gpe. Reina de México')
-                                    .openPopup();
-                            }
-                        </script>
-
-                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-                        <script>
-                            initMaptemplo6();
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-        <br>
-
-        <!-- TEMPLO 7 -->
-        <div class="row mb-4 hidden">
-            <div class="col-md-6 flexCenter">
-
-                <!-- Imagenes del carrusel -->
-                <div id="carouseltemplo7" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false"
-                    data-bs-interval="4000">
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src="imagen/templos/MDB1.jpg" class="d-block w-100" alt="Templo 7 - Imagen 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/MDB2.jpg" class="d-block w-100" alt="Templo 7 - Imagen 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imagen/templos/MDB3.jpg" class="d-block w-100" alt="Templo 7 - Imagen 3">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6">
-
-                <!-- Información del Templo 7 -->
-                <div class="card">
-
-                    <div class="card-body">
-
-                        <h3 class="card-title">Misa de barrio Sagrada Familia de Nazareth</h3>
-                        <p class="card-text extra-margin">
-                            El territorio parroquial es grande, por lo que las necesidades de acercarnos a los fieles
-                            también lo es, debido a esto fue necesario empezar a celebrar en diferentes lugares para
-                            congregar a los fieles y poder ofrecer la vivencia de los sacramentos y de la formación de
-                            la fe. Con gran entusiasmo las familias ayudan a hacer posible las misas bajo la sombra de
-                            unos árboles.
-                        </p>
-
-                        <hr>
-
-                        <p class="card-text"><strong>Fiesta Patronal:</strong> Segundo Domingo de Noviembre</p>
-                        <p class="card-text"><strong>Dirección:</strong> <a
-                                href="https://maps.app.goo.gl/GSkBxogXsPvoEESh6"> Av. Vista Real, Col. Minas de Xali
-                            </a> </p>
-
-                        <div id="mapatemplo7" class="map-container">
-                            <button id="button7" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#requisitosModal7">Horarios</button>
-                        </div>
-
-                        <div class="modal fade" id="requisitosModal7" tabindex="-1"
-                            aria-labelledby="requisitosModalLabel7" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-
-                                <div class="modal-content">
-
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-center w-100" id="requisitosModalLabel7">Itinerario
-                                        </h5>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <ul type="square">
-
-                                            <li><strong>Eucaristías.</strong>
-                                                <ul type="disc">
-                                                    <li><u>Domingo:</u> 05:00 PM.</li>
-
-                                                </ul>
-                                            </li>
-
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <script>
-                            function initMaptemplo7() {
-                                const mapatemplo7 = L.map('mapatemplo7', {
-                                    scrollWheelZoom: false,
-                                    doubleClickZoom: false,
-                                    dragging: false,
-                                    zoomControl: false
-                                }).setView([21.464947734694423, -104.90780586539476], 18);
-
-                                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                    maxZoom: 17,
-                                }).addTo(mapatemplo7);
-
-                                L.marker([21.464947734694423, -104.90780586539476]).addTo(mapatemplo7)
-                                    .bindPopup('Capilla Nuestra Señora de Gpe. Reina de México')
-                                    .openPopup();
-                            }
-                        </script>
-
-                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-                        <script>
-                            initMaptemplo7();
-                        </script>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-
-    </div>
-
-    <!-- BOTON SCROLL -->
-
-    <i id="scrollToTop" class="bi bi-chevron-up" onclick="scrollToTop()"></i>
-
-    <!-- PIE DE PAGINA -->
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">San Miguel Arcángel</div>
-            </div>
-            <div class="footer-info">
-                <p>"San Miguel, escudo de nuestra fe, protégenos"</p>
-            </div>
-        </div>
-        <p class="text-muted">&copy; 2024 SMA. Todos los derechos reservados.
-            <br><a href="terminos-y-condiciones.html" style="color: white">Términos y Condiciones</a> - <a
-                href="aviso-de-privacidad.html" style="color: white">Aviso de Privacidad</a>
-            <br>Creado con ❤️ para el Reino de Cristo
-        </p>
+    <!-- Botón automático -->
+    <button id="scrollToTop" class="transition duration-300 ease-in-out">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer id="dynamic-footer" class="bg-gray-800 text-white py-8">
+        <!-- Cargado con JS -->
     </footer>
 
-    <!-- SCRIPTS -->
 
-    <script src="general.js"></script>
-    <script src="avisos-slider.js"></script>
     <script src="menu.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="footer.js"></script>
+    <script src="autoscroll.js"></script>
+    <script src="templo.js"></script>
+    <script src="templo2.js"></script>
+    <script src="loading.js"></script>
 
 </body>
 

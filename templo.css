@@ -1,0 +1,65 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('imagen/templo/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+#TempleBtns {
+    pointer-events: none;
+}
+
+#TempleBtns button {
+    pointer-events: auto;
+}
+
+.fade-in-visible {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transition: opacity 0.6s, transform 0.6s, visibility 0.6s;
+}
+
+.fade-out-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s, transform 0.6s, visibility 0.6s;
+    visibility: hidden;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+    padding: 30px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.swiper-button-next::after {
+    content: "\f054";
+}
+
+.swiper-button-prev::after {
+    content: "\f053";
+}
+
+#infoModal {
+    z-index: 9999;
+}
