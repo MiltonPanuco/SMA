@@ -1,0 +1,253 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.banner-slide.active {
+    opacity: 1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.5rem;
+    z-index: 2;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    max-width: 40px;
+    max-height: 40px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.logo.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bottom-text {
+    position: absolute;
+    bottom: 0.25rem;
+    font-size: 0.625rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.bottom-left {
+    left: 0.25rem;
+}
+
+.bottom-center {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom-right {
+    right: 0.25rem;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    padding: 0.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 20;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-button i {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+}
+
+.prev-button {
+    left: 0.25rem;
+}
+
+.next-button {
+    right: 0.25rem;
+}
+
+@media (min-width: 640px) {
+    .banner-slider {
+        height: 200px;
+    }
+
+    .logo {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .bottom-text {
+        font-size: 0.75rem;
+    }
+
+    .nav-button i {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner-slider {
+        height: 250px;
+    }
+
+    .logo {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .bottom-text {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .banner-slider {
+        height: 200px;
+    }
+
+    .logo {
+        max-width: 60px;
+        max-height: 60px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .banner-slider {
+        height: 280px;
+    }
+}
+
+
+.advent-candles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.candle {
+    width: 12px;
+    height: 30px;
+    margin: 0 6px;
+    background-color: #8B4513;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.candle::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 6px;
+    background-color: #000;
+    border-radius: 50% 50% 0 0;
+}
+
+.candle.lit::before {
+    background-color: #FFA500;
+    box-shadow: 0 0 5px #FFA500, 0 0 10px #FFA500;
+    animation: flicker 0.5s ease-in-out infinite alternate;
+}
+
+.candle.pink {
+    background-color: #FFC0CB;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+@media (min-width: 640px) {
+    .advent-candles {
+        height: 50px;
+    }
+
+    .candle {
+        width: 16px;
+        height: 40px;
+        margin: 0 8px;
+    }
+
+    .candle::before {
+        width: 5px;
+        height: 7px;
+    }
+}
+
+@media (min-width: 768px) {
+    .advent-candles {
+        height: 60px;
+    }
+
+    .candle {
+        width: 20px;
+        height: 50px;
+        margin: 0 10px;
+    }
+
+    .candle::before {
+        width: 6px;
+        height: 8px;
+    }
+}
