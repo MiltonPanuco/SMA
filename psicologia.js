@@ -1,7 +1,7 @@
 const psychologists = [
     {
         name: "Lic. René Guardado",
-        image: "/imagen/psicologia/psicologo1.jpg",
+        image: "imagen/psicologia/psicologo1.jpg",
         cedula: "En Proceso",
         description: "El Psicólogo René Guardado participa en diferentes apostolados y atención a diferentes centros de atención,  desde hace más de 20 años participa en el acompañamiento de grupos pastorales en diferentes procesos como: evangelización, acompañamiento y procesos  personales, talleres para  padres, maestros y centros de rehabilitación, así como en retiros de crecimiento personal y grupal, actualmente trabaja en el sistema educativo como docente frente a grupo. <br><br> Su experiencia en el ámbito educativo y pastoral le ha permitido desarrollar un enfoque integral en el acompañamiento de las personas, integrando principios psicológicos y valores espirituales. Su compromiso con el crecimiento humano y la formación de personas resilientes se refleja en cada uno de sus proyectos y talleres. A través de su labor en retiros y grupos de desarrollo personal, René busca no solo proporcionar herramientas prácticas, sino también inspirar a sus participantes a descubrir un sentido profundo de propósito y bienestar en sus vidas cotidianas.",
         phrase: "Que en cada encuentro brote el consuelo y la luz de Cristo.",
@@ -16,7 +16,7 @@ const psychologists = [
     },
     {
         name: "Master Yumary Rentería",
-        image: "/imagen/psicologia/psicologo2.jpg",
+        image: "imagen/psicologia/psicologo2.jpg",
         cedula: "4993275",
         description: "La psicóloga Master Yumary Rentería es una profesional dedicada a ayudar a personas de todas las edades a enfrentar problemas emocionales y de conducta. Tiene experiencia en temas como problemas de aprendizaje, hiperactividad, déficit de atención y autismo, utilizando técnicas para mejorar el comportamiento de sus pacientes. Además, capacita a maestros y realiza evaluaciones para orientar a jóvenes en su elección profesional. <br><br> También trabaja en equipo con médicos y nutriólogos para apoyar en tratamientos de obesidad, y acompaña a adultos mayores en temas de ansiedad y depresión. Ofrece sus servicios tanto en formato presencial como en línea, atendiendo a adultos, parejas, jóvenes, adolescentes, familias y adultos mayores. <br><br> Con un trato cercano y comprensivo, Yumary ayuda a sus pacientes a sentirse escuchados y apoyados, buscando ser un instrumento de paz en cada persona que acompaña.",
         phrase: "Que seas instrumento de la paz de Dios en cada corazón que escuchas",
@@ -51,7 +51,7 @@ const psychologists = [
         name: "Lic. Yolanda Pérez Morquecho",
         image: "imagen/psicologia/psicologo4.jpg",
         cedula: "12600219",
-        description: "La psicóloga Yolanda Pérez Morquecho es una profesional de la salud mental, con experiencia en el apoyo psicológico a niños, adolescentes, jóvenes y adultos. <br><br> Cuenta con experiencia para atender a sus pacientes de manera profesional, empática y humana, ayudándolos a  descubrir, entender  y superar diversas dificultades emocionales y conductuales como ansiedad, depresión, duelos y problemáticas de pareja, además brinda herramientas y técnicas para la modificación de conducta infantil y de adolescentes. <br><br> También ofrece guía para  desarrollar una adecuada gestión de sentimientos y resolución de conflictos a través de la inteligencia emocional. <br><br> Cada sesión es adaptada a las necesidades específicas de los pacientes, garantizando que se sientan comprendidos, respetados y apoyados en su proceso psicológico.",
+        description: "La psicóloga Yolanda Pérez Morquecho es una profesional de la salud mental, con experiencia en el apoyo psicológico a niños, adolescentes, jóvenes y adultos. <br><br> Cuenta con experiencia para atender a sus pacientes de manera profesional, empática y humana, ayudándolos a  descubrir, entender  y superar diversas dificultades emocionales y conductuales como ansiedad, depresión, duelos y problemáticas de pareja, además brinda herramientas y técnicas para la modificación de conducta infantil y de adolescentes. También ofrece guía para  desarrollar una adecuada gestión de sentimientos y resolución de conflictos a través de la inteligencia emocional. <br><br> Cada sesión es adaptada a las necesidades específicas de los pacientes, garantizando que se sientan comprendidos, respetados y apoyados en su proceso psicológico.",
         phrase: "Que tu escucha sea una puerta hacia la paz y el consuelo de Dios.",
         diplomas: ["Licenciatura en Psicología", "Diplomado en psicoterapia infantil y de adolescentes", "Diplomado en terapias cognitivas, conductuales y contextuales", "Primeros auxilios psicológicos", "Asesora de un grupo juvenil religioso"],
         specialization: [

@@ -1,45 +1,45 @@
 const menuContent = `
-    <li class="mb-4"><a href="index.html" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Inicio</a></li>
-    <li class="mb-4"><a href="templo.html" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Templos</a></li>
-    <li class="mb-4"><a href="diocesis.html" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Nuestra Diócesis</a></li>
+    <li class="mb-4"><a href="index.php" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Inicio</a></li>
+    <li class="mb-4"><a href="templo.php" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Templos</a></li>
+    <li class="mb-4"><a href="diocesis.php" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Nuestra Diócesis</a></li>
     <li class="mb-2">
         <a href="#organizacion" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Organización Pastoral</a>
         <ul class="submenu mt-2">
             <li class="mb-2">
                 <a href="#liturgica" class="menu-item menu-level-1 hover:text-blue-400 transition duration-300">Pastoral litúrgica</a>
                 <ul class="submenu mt-1">
-                    <li><a href="sacramentos.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 v">Sacramentos</a></li>
-                    <li><a href="monaguillos.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Monaguillos</a></li>
-                    <li><a href="mantenimiento.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Equipo de liturgia</a></li>
-                    <li><a href="mantenimiento.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Ministros extraordinarios</a></li>
-                    <li><a href="mantenimiento.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Adoración nocturna</a></li>
-                    <li><a href="mantenimiento.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Adoración al Santísimo Sacramento (Jueves)</a></li>
+                    <li><a href="sacramentos.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 v">Sacramentos</a></li>
+                    <li><a href="monaguillos.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Monaguillos</a></li>
+                    <li><a href="mantenimiento.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Equipo de liturgia</a></li>
+                    <li><a href="ministros-extraordinarios.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Ministros extraordinarios</a></li>
+                    <li><a href="mantenimiento.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Adoración nocturna</a></li>
+                    <li><a href="mantenimiento.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Adoración al Santísimo Sacramento (Jueves)</a></li>
                 </ul>
             </li>
             <li class="mb-2">
                 <a href="#social" class="menu-item menu-level-1 hover:text-blue-400 transition duration-300">Pastoral social</a>
                 <ul class="submenu mt-1">
-                    <li><a href="mantenimiento.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Pastoral de la salud</a></li>
-                    <li><a href="psicologia.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Psicología cristiana</a></li>
-                    <li><a href="mantenimiento.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Talleres</a></li>
+                    <li><a href="mantenimiento.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Pastoral de la salud</a></li>
+                    <li><a href="psicologia.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Psicología cristiana</a></li>
+                    <li><a href="mantenimiento.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Talleres</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#profetica" class="menu-item menu-level-1 hover:text-blue-400 transition duration-300">Pastoral profética</a>
                 <ul class="submenu mt-1">
-                    <li><a href="grupos-parroquiales.html" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Grupos parroquiales</a></li>
+                    <li><a href="grupos-parroquiales.php" class="menu-item menu-level-2 hover:text-blue-500 transition duration-300 block break-words">Grupos parroquiales</a></li>
                 </ul>
             </li>
         </ul>
     </li>
-    <li class="mb-4"><a href="columbario.html" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Columbario</a></li>
-    <li class="mb-4"><a href="galeria.html" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Galería</a></li>
-    <li class="mb-4"><a href="contacto.html" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Contacto</a></li>
+    <li class="mb-4"><a href="columbario.php" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Columbario</a></li>
+    <li class="mb-4"><a href="galeria.php" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Galería</a></li>
+    <li class="mb-4"><a href="contacto.php" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Contacto</a></li>
     <li class="mb-4">
         <a href="#catequesis" class="menu-item menu-level-0 hover:text-blue-300 transition duration-300">Catequesis</a>
         <ul class="submenu mt-2">
             <li><a href="https://catequesis.sanmiguelxalisco.com" class="menu-item menu-level-1 hover:text-blue-400 transition duration-300 block break-words">Registro</a></li>
-            <li><a href="informes.html" class="menu-item menu-level-1 hover:text-blue-400 transition duration-300 block break-words">Informes</a></li>
+            <li><a href="informes.php" class="menu-item menu-level-1 hover:text-blue-400 transition duration-300 block break-words">Informes</a></li>
         </ul>
     </li>
 `;
@@ -77,7 +77,7 @@ menuList.addEventListener('click', (e) => {
     if (target.classList.contains('menu-level-0') || target.classList.contains('menu-level-1')) {
         const submenu = target.nextElementSibling;
         if (submenu && submenu.classList.contains('submenu')) {
-            e.preventDefault(); 
+            e.preventDefault();
             if (target.classList.contains('menu-level-0')) {
                 const allLevel0Submenus = menuList.querySelectorAll('.menu-level-0 + .submenu');
                 allLevel0Submenus.forEach(menu => {

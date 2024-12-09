@@ -33,6 +33,17 @@ const albums = [
             "imagen/galeria/Aniversario-Parroquial-2024/13.jpg",
             "imagen/galeria/Aniversario-Parroquial-2024/14.jpg"
         ]
+    },
+    {
+        title: "Fiesta en Honor a la Sagrada Familia",
+        date: "11 de Noviembre, 2024",
+        cover: "imagen/galeria/Fiesta-Sagrada-Familia/1.jpg",
+        images: [
+            "imagen/galeria/Fiesta-Sagrada-Familia/1.jpg",
+            "imagen/galeria/Fiesta-Sagrada-Familia/2.jpg",
+            "imagen/galeria/Fiesta-Sagrada-Familia/3.jpg",
+            "imagen/galeria/Fiesta-Sagrada-Familia/4.jpg"
+        ]
     }
 ];
 

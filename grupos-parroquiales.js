@@ -15,7 +15,7 @@ const gruposData = [
         modalInfo:
             `
             <div class="text-justify">
-            <p>Somos un lugar de crecimiento, apoyo y bienestar. Nos reunimos en la Parroquia <a href="templo.html" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>.</p>
+            <p>Somos un lugar de crecimiento, apoyo y bienestar. Nos reunimos en la Parroquia <a href="templo.php" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>.</p>
             <br>
             <ul>
                 <li><strong>Comunidad:</strong> Lunes a las 20:00</li>
@@ -45,7 +45,7 @@ const gruposData = [
         modalInfo:
             `
             <div class="text-justify">
-            <p>Nuestra <strong>Comunidad Neocatecumenal</strong> se reúne en la Parroquia <a href="templo.html" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>. Durante nuestras reuniones seguimos el siguiente itinerario:</p>
+            <p>Nuestra <strong>Comunidad Neocatecumenal</strong> se reúne en la Parroquia <a href="templo.php" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>. Durante nuestras reuniones seguimos el siguiente itinerario:</p>
             <br>
             <ul>
                 <li><strong>Celebración de la Palabra:</strong> Miércoles a las 20:00</li>
@@ -77,14 +77,14 @@ const gruposData = [
         modalInfo:
             `
             <div class="text-justify">
-            <p>Te invitamos a participar en nuestros cursos. Se llevan a cabo en la Parroquia <a href="templo.html" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a> y en la Capilla <a href="templo.html" class="hover:text-blue-400 transition duration-300">Inmaculada Concepción de María</a>:</p>
+            <p>Te invitamos a participar en nuestros cursos. Se llevan a cabo en la Parroquia <a href="templo.php" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a> y en la Capilla <a href="templo.php" class="hover:text-blue-400 transition duration-300">Inmaculada Concepción de María</a>:</p>
             <br>
             <ul>
                 <li><strong>Parroquia San Miguel Arcángel:</strong> Lunes y Viernes, 04:30 PM - 06:30 PM</li>
                 <li><strong>Capilla Inmaculada Concepción de María:</strong> Martes, 04:30 PM - 06:30 PM</li>
             </ul>
             <br>
-            <p>¡Esperamos contar contigo para estudiar y reflexionar sobre la Palabra de Dios! Para más detalles y para inscribirte, <a href="contacto.html" class="hover:text-blue-400 transition duration-300"><strong>Contáctanos</strong></a>.</p>
+            <p>¡Esperamos contar contigo para estudiar y reflexionar sobre la Palabra de Dios! Para más detalles y para inscribirte, <a href="contacto.php" class="hover:text-blue-400 transition duration-300"><strong>Contáctanos</strong></a>.</p>
             </div> 
         `
     },
@@ -102,7 +102,7 @@ const gruposData = [
         modalInfo:
             `
             <div class="text-justify">
-            <p>Nos reunimos en la Parroquia <a href="templo.html" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a> para vivir momentos de transformación y espiritualidad. Te invitamos a ser parte de esta experiencia única donde juntos buscamos el fortalecimiento de nuestra fe y el profundo encuentro con Dios.</p>
+            <p>Nos reunimos en la Parroquia <a href="templo.php" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a> para vivir momentos de transformación y espiritualidad. Te invitamos a ser parte de esta experiencia única donde juntos buscamos el fortalecimiento de nuestra fe y el profundo encuentro con Dios.</p>
             <br>
             <ul>
                 <li><strong>Momentos de Formación:</strong> Miércoles, 08:30 PM</li>
@@ -142,7 +142,7 @@ const gruposData = [
         modalInfo:
             `
             <div class="text-justify">
-                <p>Te invitamos a unirte a nuestras asambleas en la Parroquia <a href="templo.html" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>, donde compartimos momentos de fe, amistad y crecimiento personal. Es una excelente oportunidad para conectarte con otros jóvenes que comparten tus mismos intereses y fortalecer tu relación con Dios.</p>
+                <p>Te invitamos a unirte a nuestras asambleas en la Parroquia <a href="templo.php" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>, donde compartimos momentos de fe, amistad y crecimiento personal. Es una excelente oportunidad para conectarte con otros jóvenes que comparten tus mismos intereses y fortalecer tu relación con Dios.</p>
                 <br>
                 <ul>
                     <li><strong>Asamblea:</strong> Sábados, 05:00 PM</li>
@@ -180,9 +180,9 @@ const gruposData = [
         modalInfo:
             `
             <div class="text-justify">
-                <p><strong>Para adultos</strong>: Nos reunimos todos los martes a las 8:00 PM en la Parroquia <a href="templo.html" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>. Este es un espacio dedicado a la oración, la reflexión y el servicio misionero. Ven y comparte con nosotros la alegría de vivir y fortalecer nuestra fe en comunidad.</p>
+                <p><strong>Para adultos</strong>: Nos reunimos todos los martes a las 8:00 PM en la Parroquia <a href="templo.php" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>. Este es un espacio dedicado a la oración, la reflexión y el servicio misionero. Ven y comparte con nosotros la alegría de vivir y fortalecer nuestra fe en comunidad.</p>
                 <br>
-                <p><strong>Para jóvenes</strong>: Si eres joven, te invitamos a unirte al Movimiento Misionero Católico Juvenil (MMCJ). Nos encontramos todos los sábados a las 4:00 PM en la Parroquia <a href="templo.html" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>. Este grupo está pensado especialmente para ti, donde podrás crecer en tu compromiso misionero y en tu camino de evangelización junto a otros jóvenes.</p>
+                <p><strong>Para jóvenes</strong>: Si eres joven, te invitamos a unirte al Movimiento Misionero Católico Juvenil (MMCJ). Nos encontramos todos los sábados a las 4:00 PM en la Parroquia <a href="templo.php" class="hover:text-blue-400 transition duration-300">San Miguel Arcángel</a>. Este grupo está pensado especialmente para ti, donde podrás crecer en tu compromiso misionero y en tu camino de evangelización junto a otros jóvenes.</p>
                 <br>
             </div>
 
@@ -213,7 +213,7 @@ const gruposData = [
             `
             <div class="text-justify">
                 <h2>¡Ven y descubre la comunidad que Dios tiene para ti!</h2>
-                <p>Nos reunimos en el Templo <a href="templo.html" class="hover:text-blue-400 transition duration-300">Inmaculada Concepción de María</a>, donde te invitamos a ser parte de un grupo lleno de vida y espiritualidad. Este es un espacio para compartir, crecer y fortalecer tu fe en un ambiente acogedor y lleno de amor.</p>
+                <p>Nos reunimos en el Templo <a href="templo.php" class="hover:text-blue-400 transition duration-300">Inmaculada Concepción de María</a>, donde te invitamos a ser parte de un grupo lleno de vida y espiritualidad. Este es un espacio para compartir, crecer y fortalecer tu fe en un ambiente acogedor y lleno de amor.</p>
                 <br>
                 <ul>
                     <li><strong>Grupo:</strong> Sábados, 04:00 PM</li>
