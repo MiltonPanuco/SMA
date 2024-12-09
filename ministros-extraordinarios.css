@@ -1,0 +1,6 @@
+body {
+    background-image: url('imagen/ministros-extraordinarios/fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

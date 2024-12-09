@@ -10,11 +10,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="css/sticky-ad.css">
     <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="monaguillos.css">
     <link rel="stylesheet" href="contacto.css">
-    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="complement.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -25,10 +24,6 @@
 </head>
 
 <body class="min-h-screen">
-
-    <div id="sizebanner">
-        <?php include 'banner.php'; ?>
-    </div>
 
     <header class="sticky top-0 left-0 right-0 bg-black bg-opacity-90 z-40">
         <!-- Barra superior -->
@@ -208,6 +203,29 @@
         </div>
     </div>
 
+    <!-- Anuncio pegajoso -->
+    <div id="popup-ad" class="hidden">
+        <div class="ad-content">
+            <img id="ad-image" src="" alt="">
+            <div class="ad-text">
+                <h3 id="ad-title"></h3>
+                <p id="ad-content"></p>
+            </div>
+            <div id="advent-candles" class="advent-candles hidden">
+                <div class="candle purple" aria-label="Vela de Adviento 1"></div>
+                <div class="candle purple" aria-label="Vela de Adviento 2"></div>
+                <div class="candle pink" aria-label="Vela de Adviento 3"></div>
+                <div class="candle purple" aria-label="Vela de Adviento 4"></div>
+            </div>
+            <button id="close-ad">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <!-- Botón automático -->
     <button id="scrollToTop" class="transition duration-300 ease-in-out">
         <i class="fas fa-chevron-up"></i>
@@ -217,15 +235,12 @@
     <footer id="dynamic-footer" class="bg-gray-800 text-white py-8">
         <!-- Cargado con JS -->
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script src="banner.js"></script>
     
+    <script src="js/sticky-ad.js"></script>
     <script src="menu.js"></script>
     <script src="footer.js"></script>
     <script src="autoscroll.js"></script>
-    <script src="loading.js"></script>
-
+    <script src="js/loading.js"></script>
 
 </body>
 
