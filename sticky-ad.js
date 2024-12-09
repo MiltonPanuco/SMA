@@ -97,7 +97,7 @@ function showAd() {
     adImage.alt = `Imagen de fondo para ${ad.title}`;
     adContainer.onclick = function(event) {
         if (event.target !== closeButton && !closeButton.contains(event.target)) {
-            window.open(ad.link, '_blank');
+            window.open(ad.link, '_self');
         }
     };
 
