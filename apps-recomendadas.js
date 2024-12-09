@@ -35,7 +35,7 @@ const appRecommendationsContent = `
             </div>
         </li>
         <li>
-            <a href="mantenimiento.html" target="_blank" class="text-blue-600 hover:underline flex items-center">
+            <a href="mantenimiento.php" target="_blank" class="text-blue-600 hover:underline flex items-center">
                 <img src="imagen/logo.jpg" alt="Logo Bible" class="w-6 h-6 mr-2 mt-2"> Aplicación SMA
             </a>
             <div>
