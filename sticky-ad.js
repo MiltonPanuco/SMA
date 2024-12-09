@@ -172,7 +172,7 @@ adContainer.addEventListener('click', (e) => {
 });
 
 window.addEventListener('load', () => {
-    setTimeout(startAdRotation, 300); // Mostrar el primer anuncio después de 30 segundos
+    setTimeout(startAdRotation, 30000); // Mostrar el primer anuncio después de 30 segundos
 });
 
 window.addEventListener('resize', () => {
