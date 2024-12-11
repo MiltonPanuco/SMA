@@ -52,13 +52,13 @@ contributionOptions.forEach(option => {
         
         switch(months) {
             case 12:
-                monthlyAmount = 1150;
+                monthlyAmount = 1250;
                 break;
             case 24:
-                monthlyAmount = 600;
+                monthlyAmount = 700;
                 break;
             case 36:
-                monthlyAmount = 420;
+                monthlyAmount = 500;
                 break;
         }
 
