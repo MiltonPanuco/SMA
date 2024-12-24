@@ -12,6 +12,12 @@ const ads = [
         link: "columbario.php"
     },
     {
+        title: "PROMOCIÓN COLUMBARIO",
+        content: "Todo diciembre = 12000 MXN",
+        image: "imagen/banner/aviso-columbario.jpg",
+        link: "columbario.php"
+    },
+    {
         title: "Monaguillos",
         content: "Sirviendo a Dios desde temprana edad",
         image: "imagen/banner/aviso-monaguillos.jpg",
@@ -29,6 +35,12 @@ const ads = [
             { color: "pink", lit: false },
             { color: "purple", lit: false }
         ]
+    },
+    {
+        title: "¡Ha Nacido Nuestro Salvador!",
+        content: "Noche de Paz, Día de Gracia",
+        image: "imagen/banner/aviso-25dic.jpg",
+        link: "index.php"
     }
 ];
 
@@ -72,7 +84,7 @@ function getRandomPosition() {
 
 function updateAdventCandles() {
     const now = new Date();
-    const adventStart = new Date(now.getFullYear(), 10, 27); // Nov 27
+    const adventStart = new Date(now.getFullYear(), 11, 9); // Nov 30
     const daysSinceAdventStart = Math.floor((now - adventStart) / (1000 * 60 * 60 * 24));
     const sundaysSinceAdventStart = Math.floor(daysSinceAdventStart / 7);
 
@@ -172,7 +184,7 @@ adContainer.addEventListener('click', (e) => {
 });
 
 window.addEventListener('load', () => {
-    setTimeout(startAdRotation, 30000); // Mostrar el primer anuncio después de 30 segundos
+    setTimeout(startAdRotation, 30); // Mostrar el primer anuncio después de 30 segundos
 });
 
 window.addEventListener('resize', () => {

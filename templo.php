@@ -182,10 +182,8 @@
                                                 Horarios
                                             </button>
                                             <div class="flex items-center">
-                                                <span class="mr-2 text-sm text-gray-600">Ver ubicación</span>
-                                                <a href="#"
-                                                    class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out"
-                                                    onclick="abrirMapa('temploICDM')">
+                                                <a href="https://maps.app.goo.gl/WLqVdi28Ho4Bp4uHA" class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out" onclick="abrirMapa('temploICDM')">
+                                                    <span class="mr-2 text-sm text-gray-600">Ver ubicación</span>
                                                     <i class="fas fa-map-marker-alt"></i>
                                                 </a>
                                             </div>
