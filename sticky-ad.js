@@ -84,7 +84,7 @@ function getRandomPosition() {
 
 function updateAdventCandles() {
     const now = new Date();
-    const adventStart = new Date(now.getFullYear(), 11, 9); // Nov 30
+    const adventStart = new Date(now.getFullYear(), 11, 9); // Nov 9
     const daysSinceAdventStart = Math.floor((now - adventStart) / (1000 * 60 * 60 * 24));
     const sundaysSinceAdventStart = Math.floor(daysSinceAdventStart / 7);
 
@@ -184,7 +184,7 @@ adContainer.addEventListener('click', (e) => {
 });
 
 window.addEventListener('load', () => {
-    setTimeout(startAdRotation, 30); // Mostrar el primer anuncio después de 30 segundos
+    setTimeout(startAdRotation, 30000); // Mostrar el primer anuncio después de 30 segundos
 });
 
 window.addEventListener('resize', () => {
