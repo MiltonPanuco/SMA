@@ -12,12 +12,6 @@ const ads = [
         link: "columbario.php"
     },
     {
-        title: "PROMOCIÓN COLUMBARIO",
-        content: "Todo diciembre = 12000 MXN",
-        image: "imagen/banner/aviso-columbario.jpg",
-        link: "columbario.php"
-    },
-    {
         title: "Monaguillos",
         content: "Sirviendo a Dios desde temprana edad",
         image: "imagen/banner/aviso-monaguillos.jpg",
@@ -151,7 +145,7 @@ adContainer.addEventListener('click', (e) => {
 });
 
 window.addEventListener('load', () => {
-    setTimeout(startAdRotation, 30000); // Mostrar el primer anuncio después de 30 segundos
+    setTimeout(startAdRotation, 300); // Mostrar el primer anuncio después de 30 segundos
 });
 
 window.addEventListener('resize', () => {
