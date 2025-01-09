@@ -22,25 +22,6 @@ const ads = [
         content: "Sirviendo a Dios desde temprana edad",
         image: "imagen/banner/aviso-monaguillos.jpg",
         link: "monaguillos.php"
-    },
-    {
-        title: "Tiempo de Adviento",
-        content: "Preparándonos en comunidad para la llegada de Cristo",
-        image: "imagen/banner/aviso-adviento.jpg",
-        link: "index.php",
-        isAdvent: true,
-        candles: [
-            { color: "purple", lit: false },
-            { color: "purple", lit: false },
-            { color: "pink", lit: false },
-            { color: "purple", lit: false }
-        ]
-    },
-    {
-        title: "¡Ha Nacido Nuestro Salvador!",
-        content: "Noche de Paz, Día de Gracia",
-        image: "imagen/banner/aviso-25dic.jpg",
-        link: "index.php"
     }
 ];
 
@@ -80,20 +61,6 @@ function getRandomPosition() {
     const randomY = Math.floor(Math.random() * maxY);
 
     return { x: randomX, y: randomY };
-}
-
-function updateAdventCandles() {
-    const now = new Date();
-    const adventStart = new Date(now.getFullYear(), 11, 9); // Nov 9
-    const daysSinceAdventStart = Math.floor((now - adventStart) / (1000 * 60 * 60 * 24));
-    const sundaysSinceAdventStart = Math.floor(daysSinceAdventStart / 7);
-
-    const adventAd = ads.find(ad => ad.isAdvent);
-    if (adventAd) {
-        for (let i = 0; i <= sundaysSinceAdventStart && i < 4; i++) {
-            adventAd.candles[i].lit = true;
-        }
-    }
 }
 
 function showAd() {

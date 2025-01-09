@@ -33,21 +33,6 @@
         <p class="bottom-text bottom-right hover:text-blue-400 transition duration-300"><a href="monaguillos.php">¡Únete a nosotros!</a></p>
     </div>
     
-    <div class="banner-slide">
-        <img src="imagen/banner/aviso-adviento.jpg" alt="Banner Adviento" class="w-full h-full object-cover">
-        <div class="banner-overlay"></div>
-        <div class="banner-content">
-            <h2 class="text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold mb-1 sm:mb-2">Tiempo de Adviento</h2>
-            <p class="text-xs sm:text-sm md:text-base lg:text-base">Preparándonos para la llegada de Cristo</p>
-            <div id="advent-candles" class="advent-candles">
-                <div class="candle" aria-label="Vela de Adviento 1"></div>
-                <div class="candle" aria-label="Vela de Adviento 2"></div>
-                <div class="candle pink" aria-label="Vela de Adviento 3"></div>
-                <div class="candle" aria-label="Vela de Adviento 4"></div>
-            </div>
-        </div>
-    </div>
-    
     <button class="nav-button prev-button" aria-label="Anterior banner">
         <i data-lucide="chevron-left"></i>
     </button>
